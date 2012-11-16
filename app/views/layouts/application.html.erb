@@ -8,9 +8,15 @@
 
 <style type="text/css">
   .div {
-    width: 200px;
+    width: 250px;
     height: 50px;
-    margin-left: 1580px;
+    font-size: 18pt;
+  }
+
+  .login {
+    width: 250px;
+    height: 130px;
+    margin-top: 50;
   }
 </style>
 
@@ -20,18 +26,19 @@
 
 <div class = "div" >
   <% if current_user %>
-    <div color = 'red'>
+    <div>
       Login: <%= current_user %> </br>
       <%= link_to 'Log out', '/logout' %>
     </div>
   <% else %>
     <div>
       <a href = "/sessions/new">Login</a>
+      <%= @no_login %>
     </div>
   <% end %>
 </div>
 
-<div class = 'div'>
+<div class = 'login'>
   <%= yield %>
 </div>
 

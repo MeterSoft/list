@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
 
   def require_login
     unless logged_in?
-      @no_login = "You must be logged"
+      @message = "You must be logged"
       redirect_to '/sessions/new'
     end
   end
