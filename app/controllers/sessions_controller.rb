@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     user = User.where(:email => params[:email], :password => params[:password]).first
     if user
       session[:user_id] = user.id
-      redirect_to tasks_path
+      redirect_to categories_path
     else
       @message = 'wrong login or pasword'
       render :action => :new
