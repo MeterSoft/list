@@ -11,7 +11,7 @@
 <% @categories.each do |category| %>
   <tr>
     <% if category.user_id == session[:user_id] %>
-    <td><%= link_to category.name, '/tasks/' %></td>
+    <td><%= link_to category.name,'/tasks?category_id=' + category.id.to_s  %></td>
     <td><%= link_to 'Show', category %></td>
     <td><%= link_to 'Edit', edit_category_path(category) %></td>
     <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
