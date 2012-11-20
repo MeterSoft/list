@@ -11,3 +11,52 @@
  *= require_self
  *= require_tree .
  */
+
+.main {
+    width: 700px;
+    height: 100%;
+    margin-left: 25%;
+    position: fixed;
+}
+
+.div {
+    width: 250px;
+    height: 50px;
+}
+
+.login {
+    width: 250px;
+    height: 130px;
+    margin-top: 25%;
+    margin-left: 25%;
+    position: absolute;
+}
+
+.on {
+    display: block;
+}
+
+.off {
+    display: none;
+}
+
+#topmenu {
+    list-style: none;
+    display: block;
+    margin-left: 25%;
+    float: left;
+    padding: 0;
+    width: 500px;
+    font-size: 26pt;
+    border: 1pt;
+}
+
+#topmenu li {
+    float: left;
+    font-weight: bold;
+    padding: 10px 0px
+}
+
+#topmenu li a {
+    padding: 0 10px;
+}

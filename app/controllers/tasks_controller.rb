@@ -3,12 +3,8 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    @tasks = Task.all
-    @cat_id
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @tasks }
-    end
+    category = Category.find_by_id(params[:category_id])
+    @tasks = category ? category.tasks : current_user.tasks
   end
 
   # GET /tasks/1
