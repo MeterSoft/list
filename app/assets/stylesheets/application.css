@@ -65,15 +65,18 @@ tr.grey {
     background-color:  #adff2f;
 }
 
-table.tasks tr:hover {
-    background-color: yellow;
+table.link tr:hover {
+    background-color: #deb887;
 }
 
-table.tasks tr:hover a {
-    color: red;
+table.link tr:hover a {
     display: block;
 }
 
-table.tasks tr a {
+table.link tr a {
     display: none;
+}
+
+#c a {
+    display: block;
 }
