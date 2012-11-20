@@ -25,7 +25,6 @@
 }
 
 .login {
-    width: 250px;
     height: 130px;
     margin-top: 25%;
     margin-left: 25%;
@@ -59,4 +58,22 @@
 
 #topmenu li a {
     padding: 0 10px;
+}
+
+
+tr.grey {
+    background-color:  #adff2f;
+}
+
+table.tasks tr:hover {
+    background-color: yellow;
+}
+
+table.tasks tr:hover a {
+    color: red;
+    display: block;
+}
+
+table.tasks tr a {
+    display: none;
 }

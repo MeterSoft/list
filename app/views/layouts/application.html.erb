@@ -12,11 +12,11 @@
 
   <% if current_user %>
       <div>
-        Login: <%= current_user.email %> </br>
+        Login: <%= current_user.email %>
+        <%= link_to 'Log Out', '/logout' %> </br>
         <ul id='topmenu'>
           <li><a href="/categories/">Gategories</a></li>
           <li><a href="/tasks/">Tasks</a></li>
-          <li><%= link_to 'Log Out', '/logout' %></li>
         </ul>
       </div>
   <% end %>

@@ -19,6 +19,10 @@
     <%= f.label :description %><br />
     <%= f.text_field :description %>
   </div>
+  <div class="field">
+    <%= f.label :category %><br />
+    <%= f.select :category_id, Category.all.map {|c| [c.name, c.id]} %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
