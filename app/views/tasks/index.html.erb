@@ -11,13 +11,13 @@
   </tr>
 
   <% @tasks.each do |task| %>
-    <tr>
+    <tr id="task_<%= task.id %>">
       <td><%= task.title %></td>
       <td><%= task.description %></td>
       <td><%= task.category.name %></td>
       <td><%= link_to image_tag("srch_24.png"), task %></td>
       <td><%= link_to image_tag("tools_24.png"), edit_task_path(task) %></td>
-      <td><%= link_to image_tag("trash_24.png"), task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to image_tag("trash_24.png"), task, :method => :delete, :data => { confirm: 'Are you sure?' }, :remote => true  %></td>
     </tr>
   <% end %>
 </table>

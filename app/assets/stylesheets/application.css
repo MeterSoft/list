@@ -31,14 +31,6 @@
     position: absolute;
 }
 
-.on {
-    display: block;
-}
-
-.off {
-    display: none;
-}
-
 #topmenu {
     list-style: none;
     display: block;
@@ -65,18 +57,14 @@ tr.grey {
     background-color:  #adff2f;
 }
 
-table.link tr:hover {
+table.link tbody tr:hover {
     background-color: #deb887;
 }
 
-table.link tr:hover a {
+tbody.link tr:hover td.icon {
     display: block;
 }
 
-table.link tr a {
+tbody.link tr td.icon {
     display: none;
-}
-
-#c a {
-    display: block;
 }

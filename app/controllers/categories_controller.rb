@@ -5,7 +5,7 @@ class CategoriesController < ApplicationController
   def index
 
     @categories = current_user.categories
-
+    @category = Category.new
 
     respond_to do |format|
       format.html # index.html.erb
@@ -43,13 +43,14 @@ class CategoriesController < ApplicationController
   # POST /categories
   # POST /categories.json
   def create
+    @categories = current_user.categories
     @category = Category.new(params[:category])
     @category.user = current_user
 
     respond_to do |format|
       if @category.save
         format.html { redirect_to @category, notice: 'Category was successfully created.' }
-        format.json { render json: @category, status: :created, location: @category }
+        format.js
       else
         format.html { render action: "new" }
         format.json { render json: @category.errors, status: :unprocessable_entity }
@@ -76,12 +77,13 @@ class CategoriesController < ApplicationController
   # DELETE /categories/1
   # DELETE /categories/1.json
   def destroy
+    @categories = current_user.categories
     @category = Category.find(params[:id])
     @category.destroy
 
     respond_to do |format|
       format.html { redirect_to categories_url }
-      format.json { head :no_content }
+      format.js
     end
   end
 end
