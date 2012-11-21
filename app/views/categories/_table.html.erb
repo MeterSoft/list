@@ -2,9 +2,9 @@
   <tr id="category_<%= category.id %>">
     <td><%= index + 1%></td>
     <td><%= link_to category.name, tasks_path(:category_id => category) %></td>
-    <td class="icon"><%= link_to image_tag("srch_24.png"), category %></td>
-    <td class="icon"><%= link_to image_tag("tools_24.png"), edit_category_path(category) %></td>
-    <td class="icon"><%= link_to image_tag("trash_24.png"), category, method: :delete, data: {confirm: 'Are you sure?'}, :remote => true %></td>
+    <td class="v"><%= link_to image_tag("srch_24.png"), category %></td>
+    <td class="v"><%= link_to image_tag("tools_24.png"), edit_category_path(category) %></td>
+    <td class="v"><%= link_to image_tag("trash_24.png"), category, method: :delete, data: {confirm: 'Are you sure?'}, :remote => true %></td>
   </tr>
 <% end %>
 

@@ -53,18 +53,16 @@
 }
 
 
-tr.grey {
-    background-color:  #adff2f;
-}
-
 table.link tbody tr:hover {
     background-color: #deb887;
 }
 
-tbody.link tr:hover td.icon {
-    display: block;
+table.link tbody tr td.v {
+    display:none;
 }
 
-tbody.link tr td.icon {
-    display: none;
+table.link tbody tr:hover td.v {
+    display: table-cell;
 }
+
+

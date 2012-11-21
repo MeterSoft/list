@@ -1,7 +1,0 @@
-<tr id="category_<%= category.id %>">
-  <td id="c"><%= index + 1%></td>
-  <td id="c"><%= link_to category.name, tasks_path(:category_id => category) %></td>
-  <td><%= link_to image_tag("srch_24.png"), category %></td>
-  <td><%= link_to image_tag("tools_24.png"), edit_category_path(category) %></td>
-  <td><%= link_to image_tag("trash_24.png"), category, method: :delete, data: {confirm: 'Are you sure?'}, :remote => true %></td>
-</tr>
