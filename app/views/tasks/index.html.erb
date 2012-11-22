@@ -1,27 +1,36 @@
 <h1>Listing tasks</h1>
 
 <table class='link'>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Category</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-  <% @tasks.each do |task| %>
-    <tr id="task_<%= task.id %>">
-      <td><%= task.title %></td>
-      <td><%= task.description %></td>
-      <td><%= task.category.name %></td>
-      <td><%= link_to image_tag("srch_24.png"), task %></td>
-      <td><%= link_to image_tag("tools_24.png"), edit_task_path(task) %></td>
-      <td><%= link_to image_tag("trash_24.png"), task, :method => :delete, :data => { confirm: 'Are you sure?' }, :remote => true  %></td>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Category</th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
-  <% end %>
+  </thead>
+
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr id="task_<%= task.id %>">
+        <td><%= task.title %></td>
+        <td><%= task.description %></td>
+        <td><%= task.category.name %></td>
+        <td class="v"><%= link_to image_tag("srch_24.png"), task %></td>
+        <td class="v"><%= link_to image_tag("tools_24.png"), edit_task_path(task) %></td>
+        <td class="v"><%= link_to image_tag("trash_24.png"), task, :method => :delete, :data => { confirm: 'Are you sure?' }, :remote => true  %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
 
 <br />
 
 <%= link_to 'New Task', new_task_path %>
+
+<script type="text/javascript">
+  $('tr:odd').css("background-color", "#bbbbff");
+</script>
+

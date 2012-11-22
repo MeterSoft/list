@@ -1,3 +1,4 @@
+<tbody>
 <% @categories.each_with_index do |category, index| %>
   <tr id="category_<%= category.id %>">
     <td><%= index + 1%></td>
@@ -7,6 +8,7 @@
     <td class="v"><%= link_to image_tag("trash_24.png"), category, method: :delete, data: {confirm: 'Are you sure?'}, :remote => true %></td>
   </tr>
 <% end %>
+</tbody>
 
 <script type="text/javascript">
   $('tr:odd').css("background-color", "#bbbbff");
