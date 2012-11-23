@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :category do
     name 'shopping'
-    association :user
+    association :user, :factory => :user
   end
 end
