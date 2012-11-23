@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="354771a9-7ea5-4f73-ba22-d8382d0aa009" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/controllers/categories_controller_spec.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/factories/task.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/categories/_li_sortable.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/category.rb" afterPath="$PROJECT_DIR$/app/models/category.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/controllers/tasks_controller_spec.rb" afterPath="$PROJECT_DIR$/spec/controllers/tasks_controller_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/factories/categoty.rb" afterPath="$PROJECT_DIR$/spec/factories/categoty.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/category_spec.rb" afterPath="$PROJECT_DIR$/spec/models/category_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/task_spec.rb" afterPath="$PROJECT_DIR$/spec/models/task_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/models/user_spec.rb" afterPath="$PROJECT_DIR$/spec/models/user_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/categories/_table.html.erb" afterPath="$PROJECT_DIR$/app/views/categories/_table.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/categories/index.html.erb" afterPath="$PROJECT_DIR$/app/views/categories/index.html.erb" />
     </list>
     <ignored path="list.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,13 +29,31 @@
     <favorites_list name="list" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.40710723">
+    <splitter split-orientation="horizontal" split-proportion="0.7169576">
       <split-first>
         <leaf>
           <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/categories/index.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="18" column="6" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0">
+                <state line="24" column="0" selection-start="362" selection-end="362" vertical-scroll-proportion="-15.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_li_sortable.html.erb" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/views/categories/_li_sortable.html.erb">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="2" column="17" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="application.css" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="68" column="25" selection-start="1278" selection-end="1278" vertical-scroll-proportion="0.8792497">
                   <folding />
                 </state>
               </provider>
@@ -48,16 +62,7 @@
           <file leaf-file-name="_table.html.erb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/views/categories/_table.html.erb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="14" column="51" selection-start="640" selection-end="640" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="tasks_controller.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/controllers/tasks_controller.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="38" column="54" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0">
+                <state line="9" column="12" selection-start="8" selection-end="555" vertical-scroll-proportion="-5.625">
                   <folding />
                 </state>
               </provider>
@@ -81,15 +86,6 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="sessions_controller.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="20" column="59" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/models/user.rb">
               <provider selected="true" editor-type-id="text-editor">
@@ -108,10 +104,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="category.rb" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="category.rb" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/models/category.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="8" column="20" selection-start="216" selection-end="216" vertical-scroll-proportion="0.14440434">
+                <state line="4" column="74" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -157,10 +153,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="tasks_controller_spec.rb" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="tasks_controller_spec.rb" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/spec/controllers/tasks_controller_spec.rb">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="7" column="9" selection-start="147" selection-end="147" vertical-scroll-proportion="0.12309496">
+                <state line="7" column="9" selection-start="147" selection-end="147" vertical-scroll-proportion="0.13190955">
                   <folding />
                 </state>
               </provider>
@@ -227,10 +223,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/config/database.yml" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/spec/controllers/sessions_controller_spec.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/task.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
@@ -243,6 +235,10 @@
         <option value="$PROJECT_DIR$/app/models/category.rb" />
         <option value="$PROJECT_DIR$/spec/models/category_spec.rb" />
         <option value="$PROJECT_DIR$/spec/controllers/categories_controller_spec.rb" />
+        <option value="$PROJECT_DIR$/app/views/categories/_table.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/categories/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/categories/_li_sortable.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
       </list>
     </option>
   </component>
@@ -355,6 +351,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="list" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="list" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="list" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="list" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="categories" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -655,48 +691,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="19" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/controllers/sessions_controller_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="0" selection-end="145" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="19" selection-start="877" selection-end="877" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="51" selection-start="884" selection-end="884" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/factories/task.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="28" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/task.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="51" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/categories_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -718,13 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/category.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="20" selection-start="216" selection-end="216" vertical-scroll-proportion="0.14440434">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/models/task_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="76" selection-start="466" selection-end="466" vertical-scroll-proportion="0.0">
@@ -741,7 +728,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/models/user_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="34" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0">
+        <state line="9" column="103" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -762,7 +749,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/controllers/tasks_controller_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="9" selection-start="147" selection-end="147" vertical-scroll-proportion="0.12309496">
+        <state line="7" column="9" selection-start="147" selection-end="147" vertical-scroll-proportion="0.13190955">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/category.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="74" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/tasks_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="54" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/categories/_table.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="12" selection-start="8" selection-end="555" vertical-scroll-proportion="-5.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/categories/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="362" selection-end="362" vertical-scroll-proportion="-15.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="59" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/categories/_li_sortable.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="17" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="25" selection-start="1278" selection-end="1278" vertical-scroll-proportion="0.8792497">
           <folding />
         </state>
       </provider>

@@ -1,6 +1,6 @@
 <tbody>
 <% @categories.each_with_index do |category, index| %>
-  <tr id="category_<%= category.id %>">
+  <tr id="category_<%= category.id %>" class="sortable">
     <td><%= index + 1%></td>
     <td><%= link_to category.name, tasks_path(:category_id => category) %></td>
     <td class="v"><%= link_to image_tag("srch_24.png"), category %></td>

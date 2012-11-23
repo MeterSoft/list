@@ -65,4 +65,7 @@ table.link tbody tr:hover td.v {
     display: table-cell;
 }
 
-
+li.line div {
+    display:inline-block;
+    margin-left:10px;
+}
