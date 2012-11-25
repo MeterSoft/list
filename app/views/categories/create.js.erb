@@ -1,2 +1,2 @@
-$('#category_table tbody').replaceWith('<%= escape_javascript(render(:partial => 'table.html', :locals => { :categories => @categories })) %>');
+$('#category_ol').replaceWith('<%= escape_javascript(render(:partial => 'li_sortable.html', :locals => { :categories => @categories })) %>');
 $("form input[type=text]").val('');

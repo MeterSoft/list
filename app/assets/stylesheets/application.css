@@ -68,4 +68,19 @@ table.link tbody tr:hover td.v {
 li.line div {
     display:inline-block;
     margin-left:10px;
+    margin-top:5px;
+    height:20px;
+}
+
+li.line div.v {
+    display: none;
+}
+
+li.line:hover div.v {
+    display: inline-block;
+}
+
+div.title div {
+    display:inline-block;
+    margin-left:15px;
 }
