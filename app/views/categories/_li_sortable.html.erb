@@ -6,25 +6,27 @@
   <div>
     <ol class="sortable">
       <% @categories.each do |category| %>
-        <li class="line" id="category_<%= category.id %>">
-          <div><%= link_to category.name, tasks_path(:category_id => category) %></div>
-          <div class="v"><%= link_to image_tag("srch_24.png"), category %></div>
-          <div class="v"><%= link_to image_tag("tools_24.png"), edit_category_path(category) %></div>
-          <div class="v"><%= link_to image_tag("trash_24.png"), category, method: :delete, data: {confirm: 'Are you sure?'}, :remote => true %></div>
-        </li>
+          <li class="line" id="category_<%= category.id %>">
+            <div><%= link_to category.name, tasks_path(:category_id => category) %></div>
+            <div class="v"><%= link_to image_tag("srch_24.png"), category %></div>
+            <div class="v"><%= link_to image_tag("tools_24.png"), edit_category_path(category) %></div>
+            <div class="v"><%= link_to image_tag("trash_24.png"), category, method: :delete, data: {confirm: 'Are you sure?'}, :remote => true %></div>
+          </li>
       <% end %>
     </ol>
   </div>
 </div>
 
 <script>
-    $(function(){
-       $(".sortable").sortable({
-           stop: function(event, ui) {
-              //var order = $(this).sortable('serialize');
-           }
-       })
+    $(function() {
+        $(".sortable").sortable({
+            update: function(event, ui) {
+                var str = $(this).sortable('serialize');
+                $.ajax({
+                    url: '<%= categories_orders_path %>',
+                    data: str
+                });
+            }
+        })
     });
-    //$('.sortable').sortable();
-    $('li.line:odd').css("background-color", "#bbbbff");
 </script>

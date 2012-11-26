@@ -5,6 +5,7 @@ class TasksController < ApplicationController
   def index
     category = Category.find_by_id(params[:category_id])
     @tasks = category ? category.tasks : current_user.tasks
+    @tasks = @tasks.joins(:tasks_order).order("tasks_orders.id")
   end
 
   # GET /tasks/1

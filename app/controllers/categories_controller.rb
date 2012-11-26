@@ -5,6 +5,8 @@ class CategoriesController < ApplicationController
   def index
 
     @categories = current_user.categories
+                              .joins(:categories_order)
+                              .order('categories_orders.id')
     @category = Category.new
 
     respond_to do |format|

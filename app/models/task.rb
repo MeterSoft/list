@@ -2,6 +2,7 @@ class Task < ActiveRecord::Base
   attr_accessible :description, :title, :category_id, :category
   belongs_to :category
   validate :title_or_description
+  has_one :tasks_order
 
   private
 
