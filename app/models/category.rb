@@ -4,6 +4,7 @@ class Category < ActiveRecord::Base
   has_many :tasks, :dependent => :destroy
   validates :name, :presence => true
   has_one :categories_order
+  has_many :tasks_order
 
   def hi(user)
     user.full_name

@@ -24,7 +24,9 @@
         $(".sortable").sortable({
             update: function(event, ui) {
                 var str = $(this).sortable('serialize');
+                <% if params[:category_id] %>
                 str = str + "&category_id=<%= params[:category_id]%>";
+                <% end %>
                 console.log(str);
                 $.ajax({
                     url: '<%= tasks_orders_path %>',
