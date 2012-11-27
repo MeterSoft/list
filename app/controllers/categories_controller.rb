@@ -1,12 +1,11 @@
 class CategoriesController < ApplicationController
 
+  before_filter :find_categories, :only => [:index, :create, :destroy]
+
   # GET /categories
   # GET /categories.json
   def index
 
-    @categories = current_user.categories
-                              .joins(:categories_order)
-                              .order('categories_orders.id')
     @category = Category.new
 
     respond_to do |format|
@@ -45,7 +44,6 @@ class CategoriesController < ApplicationController
   # POST /categories
   # POST /categories.json
   def create
-    @categories = current_user.categories
     @category = Category.new(params[:category])
     @category.user = current_user
 
@@ -79,7 +77,6 @@ class CategoriesController < ApplicationController
   # DELETE /categories/1
   # DELETE /categories/1.json
   def destroy
-    @categories = current_user.categories
     @category = Category.find(params[:id])
     @category.destroy
 
@@ -87,5 +84,14 @@ class CategoriesController < ApplicationController
       format.html { redirect_to categories_url }
       format.js
     end
+  end
+
+  private
+
+  def find_categories
+
+    @categories = current_user.categories
+                              .joins("LEFT JOIN `categories_orders` ON `categories_orders`.`category_id` = `categories`.`id`")
+                              .order('categories_orders.id')
   end
 end

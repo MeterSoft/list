@@ -1,11 +1,11 @@
 class TasksController < ApplicationController
 
+  before_filter :find_tasks, :only => [:index, :create, :destroy]
+
   # GET /tasks
   # GET /tasks.json
   def index
-    category = Category.find_by_id(params[:category_id])
-    @tasks = category ? category.tasks : current_user.tasks
-    @tasks = @tasks.joins(:tasks_order).order("tasks_orders.id")
+
   end
 
   # GET /tasks/1
@@ -77,5 +77,11 @@ class TasksController < ApplicationController
       format.html { redirect_to tasks_url }
       format.js
     end
+  end
+
+  private
+
+  def find_tasks
+    @tasks = Task.ordered_by_category(current_user, params[:category_id])
   end
 end
