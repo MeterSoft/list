@@ -1,21 +1,17 @@
 class CategoriesController < ApplicationController
 
-  before_filter :find_categories, :only => [:index, :create, :destroy]
+  before_filter :find_categories, :only => [:index]
 
-  # GET /categories
-  # GET /categories.json
   def index
 
     @category = Category.new
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @categories }
+      format.js
     end
   end
 
-  # GET /categories/1
-  # GET /categories/1.json
   def show
     @category = Category.find(params[:id])
 
@@ -25,8 +21,6 @@ class CategoriesController < ApplicationController
     end
   end
 
-  # GET /categories/new
-  # GET /categories/new.json
   def new
     @category = Category.new
 
@@ -36,19 +30,16 @@ class CategoriesController < ApplicationController
     end
   end
 
-  # GET /categories/1/edit
   def edit
     @category = Category.find(params[:id])
   end
 
-  # POST /categories
-  # POST /categories.json
   def create
     @category = Category.new(params[:category])
     @category.user = current_user
-
     respond_to do |format|
       if @category.save
+        find_categories
         format.html { redirect_to @category, notice: 'Category was successfully created.' }
         format.js
       else
@@ -58,8 +49,6 @@ class CategoriesController < ApplicationController
     end
   end
 
-  # PUT /categories/1
-  # PUT /categories/1.json
   def update
     @category = Category.find(params[:id])
 
@@ -74,12 +63,10 @@ class CategoriesController < ApplicationController
     end
   end
 
-  # DELETE /categories/1
-  # DELETE /categories/1.json
   def destroy
     @category = Category.find(params[:id])
     @category.destroy
-
+    find_categories
     respond_to do |format|
       format.html { redirect_to categories_url }
       format.js
@@ -89,9 +76,11 @@ class CategoriesController < ApplicationController
   private
 
   def find_categories
-
-    @categories = current_user.categories
-                              .joins("LEFT JOIN `categories_orders` ON `categories_orders`.`category_id` = `categories`.`id`")
-                              .order('categories_orders.id')
+    order = current_user.categories_order
+    new_order = []
+    order.each do |o|
+       current_user.categories.find_by_id(o) ? new_order << current_user.categories.find_by_id(o) : o
+    end
+    @categories = new_order + (current_user.categories.all - new_order)
   end
 end

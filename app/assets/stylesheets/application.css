@@ -16,12 +16,14 @@
     width: 700px;
     height: 100%;
     margin-left: 25%;
-    position: fixed;
+    position: absolute;
+    background-color: yellow;
 }
 
 .div {
     width: 250px;
     height: 50px;
+    background-color:red;
 }
 
 .login {
@@ -29,12 +31,12 @@
     margin-top: 25%;
     margin-left: 25%;
     position: absolute;
+    background-color: red;
 }
 
 #topmenu {
-    list-style: none;
+
     display: block;
-    margin-left: 25%;
     float: left;
     padding: 0;
     width: 500px;
@@ -83,4 +85,21 @@ li.line:hover div.v {
 div.title div {
     display:inline-block;
     margin-left:15px;
+}
+
+.login_statys {
+    background-color: green;
+    font-size: 22px;
+    text-align:right;
+}
+
+.menu {
+    background-color: #a52a2a;
+    float: left;
+    position:absolute;
+}
+
+.menu ul {
+    list-style: none;
+    text-align:center;
 }
