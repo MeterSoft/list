@@ -5,6 +5,7 @@ describe TasksController do
   before(:each) do
     @user = FactoryGirl.create(:user)
     session[:user_id] = @user.id
+    controller.stub(:current_user).and_return(@user)
   end
 
   it 'should render new task form' do
@@ -87,6 +88,13 @@ describe TasksController do
       task = FactoryGirl.create(:task, :category => category)
       delete :destroy, :id => task.id
       assigns(:task).should be_destroyed
+    end
+  end
+
+  context "filrer" do
+    it "should call find_tasks method" do
+      Task.should_receive(:ordered_by_category).and_return([])
+      get :index
     end
   end
 end

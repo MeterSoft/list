@@ -13,7 +13,7 @@ class Task < ActiveRecord::Base
   def self.ordered_by_category(logged_in_user, category_id)
     category = Category.find_by_id(category_id)
     tasks = category ? category.tasks : logged_in_user.tasks
-    if TasksOrder.any? && TasksOrder.where(:category_id => category_id).present?
+    if TasksOrder.where(:category_id => category_id).present?
       tasks = tasks.join_order
                    .by_category(category)
                    .order('tasks_orders.id')

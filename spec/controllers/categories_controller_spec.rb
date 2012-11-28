@@ -10,9 +10,7 @@ describe CategoriesController do
     it "index" do
       FactoryGirl.create(:category, :user => @user)
       get :index
-      expect { assigns(:category) }.to be_nil
-
-      assigns(:category).should_not be_nil
+      expect { assigns(:category) }.to_not be_nil
       response.should be_success
     end
   end
