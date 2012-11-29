@@ -8,6 +8,7 @@ describe CategoriesController do
 
   context "index" do
     it "index" do
+      Category.should_receive(:ordered_by_categories).and_return([])
       FactoryGirl.create(:category, :user => @user)
       get :index
       expect { assigns(:category) }.to_not be_nil
@@ -40,6 +41,7 @@ describe CategoriesController do
 
   context "create" do
     it "create" do
+      Category.should_receive(:ordered_by_categories).and_return([])
       FactoryGirl.create(:category, :user => @user)
       post :create, :category => FactoryGirl.attributes_for(:category)
       assigns(:category).should be_valid
@@ -58,9 +60,15 @@ describe CategoriesController do
 
   context "delete" do
     it "delete" do
+      Category.should_receive(:ordered_by_categories).and_return([])
       category = FactoryGirl.create(:category)
       delete :destroy, :id => category.id
       assigns(:category).should be_destroyed
     end
+  end
+
+  it "should use ordered_by_categories" do
+    Category.should_receive(:ordered_by_categories).and_return([])
+    get :index
   end
 end

@@ -20,52 +20,63 @@ describe Task do
     end
   end
 
-  context "#ordered_by_category" do
+  context "#ordered_by_tasks" do
+    context "category not found" do
+      it "all_tasks_order is nil" do
+        category = FactoryGirl.create(:category, :user => @user)
+        category2 = FactoryGirl.create(:category, :user => @user)
 
-    it "tasksorder.any? is nil and category is nil" do
-      category = FactoryGirl.create(:category, :user => @user)
-      task = FactoryGirl.create(:task, :category => category)
-      Task.ordered_by_category(@user, nil).should == Task.all
-    end
+        task1 = FactoryGirl.create(:task, :category => category)
+        task2 = FactoryGirl.create(:task, :category => category)
 
-    it "category is nil" do
-      category = FactoryGirl.create(:category, :user => @user)
-      3.times do
-        FactoryGirl.create(:ordered_task, :category => category)
+        task3 = FactoryGirl.create(:task, :category => category2)
+        task4 = FactoryGirl.create(:task, :category => category2)
+
+        Task.ordered_by_tasks(@user, nil).should == [task1,task2,task3,task4]
       end
 
-      Task.ordered_by_category(@user, category.id).should == Task.all
-      Task.ordered_by_category(@user, category.id).should have(3).items
+      it "all_tasks_order is not nil" do
+        category = FactoryGirl.create(:category, :user => @user)
+        category2 = FactoryGirl.create(:category, :user => @user)
+
+        task1 = FactoryGirl.create(:task, :category => category)
+        task2 = FactoryGirl.create(:task, :category => category)
+
+        task3 = FactoryGirl.create(:task, :category => category2)
+        task4 = FactoryGirl.create(:task, :category => category2)
+        @user.update_attribute(:all_tasks_order, [task4,task1,task3,task2])
+
+        Task.ordered_by_tasks(@user, nil).should == [task4,task1,task3,task2]
+      end
     end
 
-    it "should return ordered list of tasks within category" do
-      category = FactoryGirl.create(:category, :user => @user)
+    context "category is selected" do
+      it "category_tasks_order is nil" do
+        category = FactoryGirl.create(:category, :user => @user)
+        category2 = FactoryGirl.create(:category, :user => @user)
 
-      task1 = FactoryGirl.create(:ordered_task, :category => category)
-      task1.tasks_order.update_attribute(:category_id, category.id)
+        task1 = FactoryGirl.create(:task, :category => category)
+        task2 = FactoryGirl.create(:task, :category => category)
 
-      task2 = FactoryGirl.create(:ordered_task, :category => category)
-      task2.tasks_order.update_attribute(:category_id, category.id)
+        task3 = FactoryGirl.create(:task, :category => category2)
+        task4 = FactoryGirl.create(:task, :category => category2)
 
-      task3 = FactoryGirl.create(:ordered_task, :category => category)
-      task3.tasks_order.update_attribute(:category_id, category.id)
+        Task.ordered_by_tasks(@user, category.id).should == [task1,task2]
+      end
 
-      category2 = FactoryGirl.create(:category, :user => @user)
+      it "category_tasks_order is not nil" do
+        category = FactoryGirl.create(:category, :user => @user)
+        category2 = FactoryGirl.create(:category, :user => @user)
 
-      task4 = FactoryGirl.create(:ordered_task, :category => category2)
-      task4.tasks_order.update_attribute(:category_id, category2.id)
+        task1 = FactoryGirl.create(:task, :category => category)
+        task2 = FactoryGirl.create(:task, :category => category)
 
-      Task.ordered_by_category(@user, category.id).should == [task1, task2, task3]
-      Task.ordered_by_category(@user, category2.id).should == [task4]
+        task3 = FactoryGirl.create(:task, :category => category2)
+        task4 = FactoryGirl.create(:task, :category => category2)
+        category2.update_attribute(:category_tasks_order, [task4,task3])
 
-      first_tasks_order = task1.tasks_order
-      last_tasks_order = task3.tasks_order
-
-      first_tasks_order.update_attribute(:task_id, task3.id)
-      last_tasks_order.update_attribute(:task_id, task1.id)
-
-      Task.ordered_by_category(@user, category.id).should == [task3, task2, task1]
-
+        Task.ordered_by_tasks(@user, category2.id).should == [task4,task3]
+      end
     end
   end
 

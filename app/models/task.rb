@@ -3,11 +3,6 @@ class Task < ActiveRecord::Base
   belongs_to :category
   validate :title_or_description
 
-  scope :by_category, lambda { |category_id|
-    category_id ? where(:category_id => category_id) : where({})
-  }
-
-
   def self.ordered_by_tasks(logged_in_user, category_id)
     if category_id
       order = logged_in_user.categories.find(category_id).category_tasks_order || []

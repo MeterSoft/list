@@ -7,27 +7,20 @@ describe TasksOrdersController do
     controller.stub(:current_user).and_return(@user)
   end
 
-  it "if category is not nil" do
-    category = FactoryGirl.create(:category, :user => @user)
+  context "#index" do
+    it "should update attribute if category is selected" do
+      category = FactoryGirl.create(:category, :user => @user)
+      category.update_attribute(:category_tasks_order, ["1","2","3"])
+      get :index, :category_id => category.id, :task => ["3","2","1"]
+      category.reload
+      category.category_tasks_order.should == ["3","2","1"]
+    end
 
-    get :index, :task => [3,4,1,2], :category_id => category.id
-
-    TasksOrder.all.should have(4).items
-
-    TasksOrder.first.task_id.should == 3
-    TasksOrder.last.task_id.should == 2
-  end
-
-  it "if category is nil" do
-    category = FactoryGirl.create(:category, :user => @user)
-
-    get :index, :task => [3,4,1,2]
-
-    TasksOrder.all.should have(4).items
-
-    TasksOrder.first.task_id.should == 3
-    TasksOrder.last.task_id.should == 2
-
+    it "should update attribute if category is not selected" do
+      @user.update_attribute(:all_tasks_order, ["1","2","3"])
+      get :index, :task => ["3","2","1"]
+      @user.all_tasks_order.should == ["3","2","1"]
+    end
   end
 
 end

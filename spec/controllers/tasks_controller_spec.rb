@@ -17,6 +17,7 @@ describe TasksController do
 
   context 'index' do
     it "should render index form" do
+      Task.should_receive(:ordered_by_tasks).and_return([])
       get :index
       assigns(:tasks).should_not be_nil
       response.should be_success
@@ -66,6 +67,7 @@ describe TasksController do
 
   context "create" do
     it "should create new task" do
+      Task.should_receive(:ordered_by_tasks).and_return([])
       category = FactoryGirl.create(:category, :user => @user)
       post :create, :task => {:title => 'asdf', :category_id => category.id}
       assigns(:task).should be_valid
@@ -84,6 +86,7 @@ describe TasksController do
 
   context "delete" do
     it "should delete task" do
+      Task.should_receive(:ordered_by_tasks).and_return([])
       category = FactoryGirl.create(:category, :user => @user)
       task = FactoryGirl.create(:task, :category => category)
       delete :destroy, :id => task.id
@@ -91,10 +94,8 @@ describe TasksController do
     end
   end
 
-  context "filrer" do
-    it "should call find_tasks method" do
-      Task.should_receive(:ordered_by_category).and_return([])
-      get :index
-    end
+  it "should use ordered_by_tasks" do
+    Task.should_receive(:ordered_by_tasks).and_return([])
+    get :index
   end
 end
