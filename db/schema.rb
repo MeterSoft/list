@@ -11,13 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121128111321) do
+ActiveRecord::Schema.define(:version => 20121129080428) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
     t.integer  "user_id"
+    t.string   "category_tasks_order"
   end
 
   create_table "tasks", :force => true do |t|
@@ -36,6 +37,7 @@ ActiveRecord::Schema.define(:version => 20121128111321) do
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
     t.string   "categories_order"
+    t.string   "all_tasks_order"
   end
 
 end

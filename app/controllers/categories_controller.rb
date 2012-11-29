@@ -42,7 +42,7 @@ class CategoriesController < ApplicationController
         find_categories
         format.html { redirect_to @category, notice: 'Category was successfully created.' }
         format.js
-      else
+      else                                      categort
         format.html { render action: "new" }
         format.json { render json: @category.errors, status: :unprocessable_entity }
       end
@@ -76,11 +76,6 @@ class CategoriesController < ApplicationController
   private
 
   def find_categories
-    order = current_user.categories_order
-    new_order = []
-    order.each do |o|
-       current_user.categories.find_by_id(o) ? new_order << current_user.categories.find_by_id(o) : o
-    end
-    @categories = new_order + (current_user.categories.all - new_order)
+    @categories = Category.ordered_by_categories(current_user)
   end
 end

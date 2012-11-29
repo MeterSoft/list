@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   validates :first_name, :last_name, :email, :password, :presence => true
 
   serialize :categories_order, Array
+  serialize :all_tasks_order, Array
 
   def full_name
     [first_name, last_name].compact.join(' ')

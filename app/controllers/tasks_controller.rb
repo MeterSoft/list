@@ -1,15 +1,10 @@
 class TasksController < ApplicationController
 
-  before_filter :find_tasks, :only => [:index, :create, :destroy]
+  before_filter :find_tasks, :only => [:index]
 
-  # GET /tasks
-  # GET /tasks.json
   def index
-
   end
 
-  # GET /tasks/1
-  # GET /tasks/1.json
   def show
     @task = Task.find(params[:id])
 
@@ -19,8 +14,6 @@ class TasksController < ApplicationController
     end
   end
 
-  # GET /tasks/new
-  # GET /tasks/new.json
   def new
     @task = Task.new
 
@@ -30,16 +23,13 @@ class TasksController < ApplicationController
     end
   end
 
-  # GET /tasks/1/edit
   def edit
     @task = Task.find(params[:id])
   end
 
-  # POST /tasks
-  # POST /tasks.json
   def create
     @task = Task.new(params[:task])
-
+    find_tasks
     respond_to do |format|
       if @task.save
         format.html { redirect_to @task, notice: 'Task was successfully created.' }
@@ -51,8 +41,6 @@ class TasksController < ApplicationController
     end
   end
 
-  # PUT /tasks/1
-  # PUT /tasks/1.json
   def update
     @task = Task.find(params[:id])
 
@@ -67,12 +55,10 @@ class TasksController < ApplicationController
     end
   end
 
-  # DELETE /tasks/1
-  # DELETE /tasks/1.json
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
-
+    find_tasks
     respond_to do |format|
       format.html { redirect_to tasks_url }
       format.js
@@ -82,6 +68,6 @@ class TasksController < ApplicationController
   private
 
   def find_tasks
-    @tasks = Task.ordered_by_category(current_user, params[:category_id])
+    @tasks = Task.ordered_by_tasks(current_user, params[:category_id])
   end
 end
