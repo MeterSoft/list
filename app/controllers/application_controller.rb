@@ -1,25 +1,9 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  
-  def current_user
-    User.find(session[:user_id]) if session[:user_id]
-  end
+  before_filter :authenticate_user!
 
-  helper_method :current_user
-
-  def logged_in?
-    !!current_user
-  end
-
-  before_filter :require_login
- 
-  private
-
-  def require_login
-    unless logged_in?
-      @no_login = "You must be logged"
-      redirect_to '/sessions/new'
-    end
+  def after_sign_out_path_for(resource_or_scope)
+    new_user_session_path
   end
 
 end
