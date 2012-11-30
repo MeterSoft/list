@@ -1,0 +1,44 @@
+body {
+    background-color:#ffe4c4;
+}
+
+.main {
+    margin-left: 500px;
+    width: 900px;
+    height: 1000px;
+    border: 1px solid;
+    background-color:aqua;
+}
+
+.login {
+    margin-top:100px;
+    margin-left:10px;
+    font-size:12px;
+}
+
+#textmenu {
+    text-align:center;
+    margin-top:10px;
+
+}
+
+.topmenu ul{
+    list-style:none;
+    padding: 10px 200px;
+}
+
+.topmenu li{
+    display:inline;
+    padding:20px;
+}
+
+.topmenu li a {
+    position:relative;
+    font-size: 22px;
+    padding: 5px 5px;
+    text-decoration:none;
+}
+
+.login input[type=password], .login input[type=email] {
+    width: 150px;
+}

@@ -12,11 +12,16 @@
  *= require_tree .
  */
 
+body {
+    background-color:#ffe4c4;
+}
+
 .main {
-    width: 700px;
-    height: 100%;
-    margin-left: 25%;
-    position: absolute;
+    margin-left: 500px;
+    width: 900px;
+    height: 1000px;
+    border: 1px solid;
+    background-color:aqua;
 }
 
 .div {
@@ -87,14 +92,29 @@ div.title div {
 .login_statys {
     font-size: 22px;
     text-align:right;
+    padding-right:10px;
+    padding-top: 10px;
 }
 
-.menu {
-    float: left;
-    position:absolute;
+.topmenu ul{
+    list-style:none;
+    padding: 10px 200px;
+
 }
 
-.menu ul {
-    list-style: none;
-    text-align:center;
+.topmenu li{
+    display:inline;
+    padding:20px;
+}
+
+.topmenu li a {
+    position:relative;
+    font-size: 22px;
+    padding: 5px 5px;
+    text-decoration:none;
+}
+
+.categories {
+    margin-left:300px;
+    margin-top: 100px;
 }

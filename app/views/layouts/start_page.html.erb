@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello! This is start page</title>
+  <%= stylesheet_link_tag "start_page", :media => "all" %>
+  <%= javascript_include_tag "start_page" %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+<div class="main">
+  <div id="textmenu">
+    <h1>Welcome to my site</h1>
+  </div>
+  <div class="topmenu">
+    <ul>
+      <li>
+        <%= link_to "Admin" %>
+      </li>
+      <li>
+        <%= link_to "My account" %>
+      </li>
+      <li>
+        <%= link_to "Registration" %>
+      </li>
+    </ul>
+
+
+  </div>
+
+  <div class="login">
+    <%= yield %>
+  </div>
+
+</div>
+
+</body>
+</html>

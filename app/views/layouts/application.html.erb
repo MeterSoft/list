@@ -15,15 +15,15 @@
         Login: <%= current_user.email %>
         <%= link_to 'Log Out',  destroy_user_session_path, :method => :delete %>
       </div>
-      <div>
-        <ul id="topmenu">
+      <div class="topmenu">
+        <ul>
           <li><a href="/categories/">Gategories</a></li>
           <li><a href="/tasks/">Tasks</a></li>
         </ul>
       </div>
   <% end %>
 
-  <div class='login'>
+  <div class="categories">
     <%= yield %>
   </div>
 
