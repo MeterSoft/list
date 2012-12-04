@@ -29,31 +29,28 @@ body {
     height: 50px;
 }
 
+.textmenu {
+    padding: 10px 200px;
+    background-color:red;
+    padding: 20px;
+
+}
+
+.textmenu div{
+    font-size: 12px;
+    float:left;
+}
+.textmenu input[type=password], .textmenu input[type=email] {
+    width: 100px;
+    height:12px;
+    font-size: 12px;
+}
+
 .login {
     height: 130px;
     margin-top: 25%;
     margin-left: 25%;
     position: static;
-}
-
-#topmenu {
-    list-style: none;
-    display: block;
-    float: left;
-    padding: 0;
-    width: 500px;
-    font-size: 26pt;
-    border: 1pt;
-}
-
-#topmenu li {
-    float: left;
-    font-weight: bold;
-    padding: 10px 0px
-}
-
-#topmenu li a {
-    padding: 0 10px;
 }
 
 

@@ -2,20 +2,20 @@
 <html>
 <head>
   <title>Hello! This is start page</title>
-  <%= stylesheet_link_tag "start_page", :media => "all" %>
-  <%= javascript_include_tag "start_page" %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
 </head>
 <body>
 <div class="main">
-  <div id="textmenu">
-    <h1>Welcome to my site</h1>
+  <div class="textmenu">
+    <%= render "new_session" %>
   </div>
   <div class="topmenu">
     <ul>
       <li>
-        <%= link_to "Admin" %>
+        <%= link_to "Film" %>
       </li>
       <li>
         <%= link_to "My account" %>
