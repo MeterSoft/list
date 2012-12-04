@@ -2,33 +2,29 @@
 <html>
 <head>
   <title>Hello! This is start page</title>
-  <%= stylesheet_link_tag "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag "start_page", :media => "all" %>
+  <%= javascript_include_tag "start_page" %>
   <%= csrf_meta_tags %>
 
 </head>
 <body>
 <div class="main">
+  <div class="top">
+    <div>
+      <h1>ByMeterSoft</h1>
+    </div>
+    <div>
+      <%= link_to "Sign up", new_registration_path(resource_name) %>
+    </div>
+  </div>
+
+
   <div class="textmenu">
-    <%= render "new_session" %>
-  </div>
-  <div class="topmenu">
-    <ul>
-      <li>
-        <%= link_to "Film" %>
-      </li>
-      <li>
-        <%= link_to "My account" %>
-      </li>
-      <li>
-        <%= link_to "Registration" %>
-      </li>
-    </ul>
-
-
+    <%= render "devise/sessions/new_session" %>
   </div>
 
-  <div class="login">
+  <div class="panel">
+    <h1>Welcome!</h1>
     <%= yield %>
   </div>
 

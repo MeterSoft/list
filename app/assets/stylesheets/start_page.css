@@ -1,58 +1,38 @@
-/*body {*/
-    /*background-color:#ffe4c4;*/
-/*}*/
+body {
+    margin: 0;
+    padding: 0;
+}
 
-/*.main {*/
-    /*margin: 0 auto;*/
-    /*width: 900px;*/
-    /*height: 1000px;*/
-    /*border: 1px solid;*/
-    /*background-color:aqua;*/
-/*}*/
+.main {
+    margin: 0 auto;
+    width: 900px;
+    height: 1000px;
+}
 
-/*.textmenu {*/
-    /*padding: 10px 200px;*/
-    /*background-color:red;*/
-    /*padding: 20px;*/
-    /*float:right;*/
+a {
+    text-decoration: none;
+}
 
-/*}*/
+.textmenu {
+    padding: 10px 200px;
+    padding: 20px;
+    font-size: 12px;
+    width:150px;
+    position:absolute;
+}
 
-/*.textmenu div{*/
-    /*font-size: 12px;*/
-    /*float:left;*/
-/*}*/
-/*.textmenu input[type=password], .textmenu input[type=email] {*/
-    /*width: 100px;*/
-    /*height:12px;*/
-    /*font-size: 12px;*/
-/*}*/
+.textmenu input[type=password], .textmenu input[type=email] {
+    width: 100px;
+    height:12px;
+    font-size: 12px;
+}
 
-/*.topmenu {*/
-    /*float:left;*/
-/*}*/
+.top div{
+    display:inline-block;
+}
 
-/*.topmenu ul{*/
-    /*list-style:none;*/
-    /*padding: 10px 200px;*/
-/*}*/
+.panel {
+    margin:0 200px;
+    position:absolute;
+}
 
-/*.topmenu li{*/
-    /*display:inline;*/
-    /*padding:20px;*/
-/*}*/
-
-/*.topmenu li a {*/
-    /*position:relative;*/
-    /*font-size: 22px;*/
-    /*padding: 5px 5px;*/
-    /*text-decoration:none;*/
-/*}*/
-
-/*.login input[type=password], .login input[type=email], .login input[type=text] {*/
-    /*width: 150px;*/
-/*}*/
-
-/*.login {*/
-    /*float: left;*/
-/*}*/
