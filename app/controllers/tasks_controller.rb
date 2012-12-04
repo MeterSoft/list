@@ -15,11 +15,14 @@ class TasksController < ApplicationController
   end
 
   def new
-    @task = Task.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @task }
+    if current_user.categories == []
+      redirect_to tasks_path, notice: 'Not fount category!'
+    else
+      @task = Task.new
+      respond_to do |format|
+        format.html # new.html.erb
+        format.json { render json: @task }
+      end
     end
   end
 

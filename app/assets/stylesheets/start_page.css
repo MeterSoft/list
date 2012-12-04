@@ -3,7 +3,7 @@ body {
 }
 
 .main {
-    margin-left: 100px;
+    margin: 0 auto;
     width: 900px;
     height: 1000px;
     border: 1px solid;
@@ -39,6 +39,6 @@ body {
     text-decoration:none;
 }
 
-.login input[type=password], .login input[type=email] {
+.login input[type=password], .login input[type=email], .login input[type=text] {
     width: 150px;
 }
