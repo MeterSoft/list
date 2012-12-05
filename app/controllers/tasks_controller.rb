@@ -32,6 +32,7 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(params[:task])
+    @task.user = current_user
     find_tasks
     respond_to do |format|
       if @task.save

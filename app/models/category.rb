@@ -1,10 +1,16 @@
-class Category < ActiveRecord::Base
-  attr_accessible :name, :user_id, :user
-  belongs_to :user
-  has_many :tasks, :dependent => :destroy
-  validates :name, :presence => true
+class Category
 
-  serialize :category_tasks_order, Array
+  include Mongoid::Document
+
+  field :name, type: String
+  field :user_id, type: Integer
+  field :category_tasks_order, type: Array
+
+
+#  attr_accessible :name, :user_id, :user
+  belongs_to :user
+  has_many :tasks
+  validates :name, :presence => true
 
   def hi(user)
     user.full_name
@@ -14,8 +20,8 @@ class Category < ActiveRecord::Base
     order = logged_in_user.categories_order || []
     new_order = []
     order.each do |o|
-      logged_in_user.categories.find_by_id(o) ? new_order << logged_in_user.categories.find_by_id(o) : o
+      logged_in_user.categories.find(o) ? new_order << logged_in_user.categories.find(o) : o
     end
-    new_order + (logged_in_user.categories.all - new_order)
+    new_order + (logged_in_user.categories - new_order)
   end
 end

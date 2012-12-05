@@ -1,6 +1,4 @@
 List::Application.routes.draw do
-  devise_for :users
-
   resources :tasks
 
   resources :categories
@@ -61,9 +59,9 @@ List::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
 
-  devise_scope :user do
-    get "/" => "devise/registrations#new"
-  end
+  #devise_scope :user do
+    #get "/" => "devise/registrations#new"
+  #end
 
 
   # See how all your routes lay out with "rake routes"
