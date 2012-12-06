@@ -4,6 +4,7 @@ describe CategoriesController do
   before(:each) do
     @user = FactoryGirl.create(:user)
     controller.stub(:current_user).and_return(@user)
+    controller.stub(:authenticate_user!).and_return(true)
   end
 
   context "index" do
@@ -42,7 +43,6 @@ describe CategoriesController do
   context "create" do
     it "create" do
       Category.should_receive(:ordered_by_categories).and_return([])
-      FactoryGirl.create(:category, :user => @user)
       post :create, :category => FactoryGirl.attributes_for(:category)
       assigns(:category).should be_valid
       assigns(:categories).should_not be_nil

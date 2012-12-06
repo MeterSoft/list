@@ -6,7 +6,7 @@ class Task
   field :category_id, type: Integer
   field :user_id, type: Integer
 
-#  attr_accessible :description, :title, :category_id, :category
+  attr_accessible :description, :title, :category_id, :user_id, :category
   belongs_to :category
   belongs_to :user
   validate :title_or_description

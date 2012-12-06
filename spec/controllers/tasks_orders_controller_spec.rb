@@ -5,6 +5,7 @@ describe TasksOrdersController do
   before(:each) do
     @user = FactoryGirl.create(:user)
     controller.stub(:current_user).and_return(@user)
+    controller.stub(:authenticate_user!).and_return(true)
   end
 
   context "#index" do

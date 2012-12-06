@@ -37,7 +37,6 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(params[:category])
     @category.user = current_user
-    find_categories
     respond_to do |format|
       if @category.save
         find_categories

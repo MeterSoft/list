@@ -3,9 +3,7 @@ FactoryGirl.define do
     title "title"
     description "description"
     association :category, :factory => :category
+    association :user, :factory => :user
   end
 
-  factory :ordered_task, :parent => :task do
-    association :tasks_order, :factory => :tasks_order
-  end
 end

@@ -1,4 +1,6 @@
 List::Application.routes.draw do
+  devise_for :users
+
   resources :tasks
 
   resources :categories
@@ -7,6 +9,9 @@ List::Application.routes.draw do
 
   resources :tasks_orders
 
+  devise_scope :user do
+    get "/" => "devise/registrations#new"
+  end
 
 
   # The priority is based upon order of creation:
@@ -60,7 +65,7 @@ List::Application.routes.draw do
   # just remember to delete public/index.html.
 
   #devise_scope :user do
-    #get "/" => "devise/registrations#new"
+  #get "/" => "devise/registrations#new"
   #end
 
 

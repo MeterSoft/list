@@ -7,7 +7,7 @@ class Category
   field :category_tasks_order, type: Array
 
 
-#  attr_accessible :name, :user_id, :user
+  attr_accessible :name, :user_id, :category_tasks_order, :user
   belongs_to :user
   has_many :tasks
   validates :name, :presence => true

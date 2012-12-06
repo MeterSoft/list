@@ -8,6 +8,7 @@ gem 'rails', '3.2.8'
 gem 'mysql2'
 gem "jquery-rails"
 gem 'devise'
+gem 'slim'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -43,6 +44,8 @@ group :test, :development do
   gem 'shoulda'
   gem "rspec-rails", "~> 2.0"
   gem 'factory_girl'
+  gem 'mongoid-rspec'
+  gem 'factory_girl_rails'
 end
 
 gem 'pry'

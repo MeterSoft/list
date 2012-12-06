@@ -4,11 +4,12 @@ describe TasksController do
 
   before(:each) do
     @user = FactoryGirl.create(:user)
-    session[:user_id] = @user.id
     controller.stub(:current_user).and_return(@user)
+    controller.stub(:authenticate_user!).and_return(true)
   end
 
   it 'should render new task form' do
+    category = FactoryGirl.create(:category, :user => @user)
     get :new
     assigns(:task).should_not be_nil
     response.should be_success
@@ -27,7 +28,7 @@ describe TasksController do
     it "should show all tasks" do
       category = FactoryGirl.create(:category, :user => @user)
       3.times do |i|
-        FactoryGirl.create(:task, :category => category)
+        FactoryGirl.create(:task, :category => category, :user => @user)
       end
       get :index
       assigns(:tasks).should have(3).items
@@ -37,10 +38,10 @@ describe TasksController do
       category1 = FactoryGirl.create(:category, :user => @user)
       category2 = FactoryGirl.create(:category, :user => @user)
       2.times do |i|
-        FactoryGirl.create(:task, :category => category1)
+        FactoryGirl.create(:task, :category => category1, :user => @user)
       end
       3.times do |i|
-        FactoryGirl.create(:task, :category => category2)
+        FactoryGirl.create(:task, :category => category2, :user => @user)
       end
       get :index, :category_id => category1.id
       assigns(:tasks).should have(2).items
@@ -50,7 +51,7 @@ describe TasksController do
   context "show" do
     it "should show task" do
       category = FactoryGirl.create(:category, :user => @user)
-      task = FactoryGirl.create(:task, :category => category)
+      task = FactoryGirl.create(:task, :category => category, :user => @user)
       get :show, :id => task.id
       assigns(:task).should_not be_nil
     end
@@ -59,7 +60,7 @@ describe TasksController do
   context "edit" do
     it "should edit task" do
       category = FactoryGirl.create(:category, :user => @user)
-      task = FactoryGirl.create(:task, :category => category)
+      task = FactoryGirl.create(:task, :category => category, :user => @user)
       get :edit, :id => task.id
       assigns(:task).should_not be_nil
     end
@@ -77,7 +78,7 @@ describe TasksController do
   context "update" do
     it "should update task" do
       category = FactoryGirl.create(:category, :user => @user)
-      task = FactoryGirl.create(:task, :category => category)
+      task = FactoryGirl.create(:task, :category => category, :user => @user)
       put :update, :id => task.id, :task => {:title => 'newtitle'}
       assigns(:task).should be_valid
       assigns(:task).title.should == 'newtitle'
@@ -88,7 +89,7 @@ describe TasksController do
     it "should delete task" do
       Task.should_receive(:ordered_by_tasks).and_return([])
       category = FactoryGirl.create(:category, :user => @user)
-      task = FactoryGirl.create(:task, :category => category)
+      task = FactoryGirl.create(:task, :category => category, :user => @user)
       delete :destroy, :id => task.id
       assigns(:task).should be_destroyed
     end
