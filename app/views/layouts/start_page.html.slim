@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+html
+    head
+      title Hello! This is start page
+      = stylesheet_link_tag "start_page", :media => "all"
+      = javascript_include_tag "start_page"
+      = csrf_meta_tags
+
+    body
+        div class="main"
+          div class="top"
+            div
+              h1 ByMeterSoft
+            div
+              = link_to "Sign up", new_registration_path(resource_name)
+
+          div class="textmenu"
+            = render "devise/sessions/new_session"
+
+          div class="panel"
+            h1 Welcome!
+            = yield

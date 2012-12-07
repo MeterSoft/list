@@ -1,0 +1,40 @@
+p id="notice"
+  = notice
+
+div id="task_ol"
+  div class="title"
+    div №
+    div Title
+    div Description
+
+  div
+    = hidden_field_tag :category_id, '', value: params[:category_id]
+    ol class="sortable"
+      - @tasks.each do |task|
+          li class="line" id="task_#{cycle(task.id)}"
+            div
+              = task.title
+            div
+              = task.description
+            div class="v"
+              = link_to image_tag("srch_24.png"), task
+            div class="v"
+              = link_to image_tag("tools_24.png"), edit_task_path(task)
+            div class="v"
+              = link_to image_tag("trash_24.png"), task, method: :delete, data: {confirm: 'Are you sure?'}, :remote => true
+
+javascript:
+    $(function() {
+        $(".sortable").sortable({
+            update: function(event, ui) {
+                var str = $(this).sortable('serialize');
+                if ($('#category_id').val()) {
+                  str = str + "&category_id=" + $('#category_id').val();
+                }
+                $.ajax({
+                    url: '#{tasks_orders_path}',
+                    data: str
+                });
+            }
+        })
+    });

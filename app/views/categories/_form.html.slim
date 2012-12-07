@@ -6,8 +6,9 @@
         = " "
         | prohibited this category from being saved:
       ul
-      - @category.errors.full_messages.each do |msg|
-        li = msg
+        - @category.errors.full_messages.each do |msg|
+          li
+            = msg
 
   div class="field"
     = f.label :name
