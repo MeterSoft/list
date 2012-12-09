@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+html
+    head
+      title List
+      = stylesheet_link_tag "application", :media => "all"
+      = javascript_include_tag "application"
+      = csrf_meta_tags
+
+
+    body
+       div class="span"
+          h3
+            | Market Stream
+            span class="expand"   +
+          ul class="rightSpan"
+            li
+               | Select Update Type
+               dl class="dropdawn"
+                 dt
+                   span All +
+                 dd
+                   ul
+                     li dflgndfkjg
+                     li nrfgjhdfjgh
+                     li dfsgjldfghdflhg
+            li dhfgkdhfgkdhfsg
+            li dskhfgkdfshgdfkgh
+            li sdghkdfhgdfkghdfgh
+
+       div class="tabs"
+          ul class="tabNavigation"
+            li: a href="#tabs-1" Messages
+            li: a href="#tabs-2" Requests
+            li: a href="#tabs-3" Notifications
+            li: a href="#tabs-4" Suggested Users
+          div id="tabs-1"
+            | lsdkjfgdfklsgdflsgndflsgnjdflgj
+          div id="tabs-2"
+            | dfngdfsngdkfgdflskgdflgdflg
+          div id="tabs-3"
+            | dksfjghkdsfgdfkjghdsfkjghdskjg
+          div id="tabs-4"
+            | jgljdfslgjdfjsgdfklsgj
+
+
+javascript:
+    $(function () {
+        var tabContainers = $('div.tabs > div');
+        tabContainers.hide().filter(':first').show();
+        $('div.tabs ul.tabNavigation a').click(function () {
+            tabContainers.hide();
+            tabContainers.filter(this.hash).show();
+            $('div.tabs ul.tabNavigation a').removeClass('selected');
+            $(this).addClass('selected');
+            return false;
+        }).filter(':first').click();
+    });
+
+    $(function(){
+        $(".rightSpan").hide();
+        $("h3 span.expand").click(function(){
+            $(this).parent().next().slideToggle();
+	    });
+	});

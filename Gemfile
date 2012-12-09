@@ -9,6 +9,8 @@ gem 'mysql2'
 gem "jquery-rails"
 gem 'devise'
 gem 'slim'
+gem "less", "~> 2.2.2"
+gem 'therubyracer'
 
 # Gems used only for assets and not required
 # in production environments by default.

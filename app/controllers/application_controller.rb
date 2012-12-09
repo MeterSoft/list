@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
     if devise_controller?
       "start_page"
     else
-      "application"
+      "my_page"
     end
   end
 
