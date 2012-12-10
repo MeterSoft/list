@@ -32,23 +32,31 @@ html
                div id="alerts"
                    = image_tag("all.PNG")
                div class="red_div"
-               = link_to "6 Alerts"
+                 = link_to "6 Alerts"
                div id="messages"
                    = image_tag("all.PNG")
                div class="red_div"
-               = link_to "5 Messages"
+                 = link_to "5 Messages"
                div id="updates"
                    = image_tag("all.PNG")
                div class="blue_div"
-               = link_to "3 Updates"
-
+                 = link_to "3 Updates"
+           div class="top_box"
+             select class="sel" id="country" name="country"
+               option selected="selected" Tracey Geronimo
 
 
 
        div class="span"
           h3
-            | Market Stream
-            span class="expand"   +
+            div id="h3_image1"
+              = image_tag("all.PNG")
+            div
+              | Market Stream
+
+            span class="expand"
+              div id="h3_image2"
+                = image_tag("all.PNG")
           ul class="rightSpan"
             li
                | Select Update Type
@@ -99,3 +107,13 @@ javascript:
             $(this).parent().next().slideToggle();
 	    });
 	});
+
+	$(function(){
+	    var params = {
+        changedEl: ".lineForm select",
+        visRows: 5,
+        scrollArrows: true
+        }
+
+        cuSel(params);
+	})
