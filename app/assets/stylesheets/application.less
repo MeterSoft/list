@@ -1,7 +1,3 @@
-body {
-    background-color:#ffe4c4;
-}
-
 .main {
     margin: 0 auto;
     width: 900px;
@@ -109,10 +105,120 @@ div.title div {
     position:absolute;
 }
 
+//top
+.top {
+
+}
+
+.top div {
+   display: inline-block;
+   vertical-align: middle;
+}
+
+#top_img {
+    .getImage(150px, 28px);
+}
+
+#top_img img {
+    .setMargian(-14px);
+}
+
+#discover {
+    .getImage(25px, 33px);
+    margin-left: 100px;
+}
+
+#discover img {
+    .setMargian(-12px, -175px);
+}
+
+#collaborate {
+    .getImage(24px, 33px);
+    margin-left: 20px;
+}
+
+#collaborate img {
+    .setMargian(-12px,-266px);
+}
+
+#transact {
+    .getImage(24px, 33px);
+    margin-left: 20px;
+}
+
+#transact img {
+    .setMargian(-12px,-370px);
+}
+
+.top_menu {
+    font-size: 12px;
+}
+
+.top_menu a {
+    color: #696969;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+// search
+#top_search {
+    position: absolute;
+    margin-left: 200px;
+}
+
+#top_search input[type=text] {
+    width: 170px;
+    height: 20px;
+}
+
+#alerts {
+    .getImage(24px, 33px);
+    margin-left: 450px;
+}
+
+#alerts img {
+    .setMargian(-11px, -867px);
+}
+
+#messages {
+    .getImage(24px, 33px);
+    margin-left: 20px;
+}
+
+#messages img {
+    .setMargian(-11px, -949px);
+}
+
+#updates {
+    .getImage(24px, 33px);
+    margin-left: 20px;
+}
+
+#updates img {
+    .setMargian(-11px, -1053px);
+}
+
+
+
+.top_menu2 {
+    font-size: 12px;
+}
+
+.top_menu2 a {
+
+}
+
+
+
+
+
 //Tabs
 
 .tabs {
-    position: fixed;
+    position: absolute;
     margin-left: 300px;
     margin-top: 100px;
 }
@@ -154,7 +260,7 @@ div.title div {
 
 .span {
     margin-top: 80px;
-    position: fixed;
+    position: absolute;
     margin-left: 80px;
 
 }
@@ -178,4 +284,15 @@ dl.dropdawn dd ul {
     display: none;
 }
 
+.getImage(@w:0px, @h:0px) {
+    overflow: hidden;
+    position: relative;
+    width: @w;
+    height: @h;
+}
 
+.setMargian(@t:0px, @l:0px) {
+    position: absolute;
+    top: @t;
+    left: @l;
+}

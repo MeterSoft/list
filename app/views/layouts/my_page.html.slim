@@ -8,6 +8,43 @@ html
 
 
     body
+
+       div class="top"
+           div id="top_img"
+             = image_tag("all.PNG")
+           div class="top_menu"
+               div id="discover"
+                 = image_tag("all.PNG")
+               = link_to "Discover"
+               div id="collaborate"
+                 = image_tag("all.PNG")
+               = link_to "Collaborate"
+               div id="transact"
+                 = image_tag("all.PNG")
+               = link_to "Transact"
+
+           div id="top_search"
+             form
+               span
+                 input type="text" class="" placeholder="Search"
+
+           div class="top_menu2"
+               div id="alerts"
+                   = image_tag("all.PNG")
+               div class="red_div"
+               = link_to "6 Alerts"
+               div id="messages"
+                   = image_tag("all.PNG")
+               div class="red_div"
+               = link_to "5 Messages"
+               div id="updates"
+                   = image_tag("all.PNG")
+               div class="blue_div"
+               = link_to "3 Updates"
+
+
+
+
        div class="span"
           h3
             | Market Stream

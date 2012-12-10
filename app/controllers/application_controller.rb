@@ -21,7 +21,8 @@ class ApplicationController < ActionController::Base
 
   def layout_by_resource
     if devise_controller?
-      "start_page"
+#      "start_page"
+      "my_page"
     else
       "my_page"
     end
