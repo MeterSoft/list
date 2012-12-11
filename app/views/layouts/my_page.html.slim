@@ -2,8 +2,10 @@
 html
     head
       title List
+      = stylesheet_link_tag "bootstrap", :media => "screen"
       = stylesheet_link_tag "application", :media => "all"
       = javascript_include_tag "application"
+      = javascript_include_tag "bootstrap"
       = csrf_meta_tags
 
 
@@ -41,51 +43,78 @@ html
                    = image_tag("all.PNG")
                div class="blue_div"
                  = link_to "3 Updates"
-           div class="top_box"
-             select class="sel" id="country" name="country"
-               option selected="selected" Tracey Geronimo
+
+           div class="btn-group"
+             button class="btn" Tracey Geronimo
+             button class="btn dropdown-toggle" data-toggle="dropdown"
+               span class="caret"
+             ul class="dropdown-menu" id="sel"
+               li
+                 a href="#" dfgjdfljg
+               li
+                 a href="#" sdfkghdfkhgdf
+
+
+       div class="main_panel"
+           div class="span"
+              h3
+                div id="h3_image1"
+                  = image_tag("glyphicons-halflings-white.png")
+                div
+                  | Market Stream
+
+                span class="expand"
+                  div id="h3_image2"
+                    = image_tag("glyphicons-halflings-white2.png")
+              ul class="rightSpan"
+                li
+                    div id="text-btn-group"
+                      | Select Update Type:
+                    div class="btn-group"
+                       a class="btn dropdown-toggle" data-toggle="dropdown" href="#"
+                         | All
+                         span class="caret" id="my-caret"
+                       ul class="dropdown-menu"
+                         li dfhgksdfhgdfkgh
+                         li dhfgk sdfhgkhdf
+                li
+                  br
+                li class="fixed-height"
+                   ul class="nav nav-pills nav-stacked"
+                      - 15.times do
+                         li
+                           a href="#"
+                               div id="first-td"
+                                 div id="table-image"
+                                    = image_tag("glyphicons-halflings.png")
+                               div id="inline-td-main"
+                                   span class="red-lable"
+                                     | Marian Volsky
+                                   | "enxious to see mockup"
+                                   br
+                                   span class="mini-lable"
+                                     | 27 minutes ago via iPhone
+                               div id="image-close"
+                                  div id="table-image-close"
+                                    = image_tag("glyphicons-halflings.png")
 
 
 
-       div class="span"
-          h3
-            div id="h3_image1"
-              = image_tag("all.PNG")
-            div
-              | Market Stream
 
-            span class="expand"
-              div id="h3_image2"
-                = image_tag("all.PNG")
-          ul class="rightSpan"
-            li
-               | Select Update Type
-               dl class="dropdawn"
-                 dt
-                   span All +
-                 dd
-                   ul
-                     li dflgndfkjg
-                     li nrfgjhdfjgh
-                     li dfsgjldfghdflhg
-            li dhfgkdhfgkdhfsg
-            li dskhfgkdfshgdfkgh
-            li sdghkdfhgdfkghdfgh
-
-       div class="tabs"
-          ul class="tabNavigation"
-            li: a href="#tabs-1" Messages
-            li: a href="#tabs-2" Requests
-            li: a href="#tabs-3" Notifications
-            li: a href="#tabs-4" Suggested Users
-          div id="tabs-1"
-            | lsdkjfgdfklsgdflsgndflsgnjdflgj
-          div id="tabs-2"
-            | dfngdfsngdkfgdflskgdflgdflg
-          div id="tabs-3"
-            | dksfjghkdsfgdfkjghdsfkjghdskjg
-          div id="tabs-4"
-            | jgljdfslgjdfjsgdfklsgj
+           div class="tabs"
+              ul class="tabNavigation"
+                li: a href="#tabs-1" Messages
+                li: a href="#tabs-2" Requests
+                li: a href="#tabs-3" Notifications
+                li: a href="#tabs-4" Suggested Users
+              div id="tabs-1"
+                | lsdkjfgdfklsgdflsgndflsgnjdflgj
+              div id="tabs-2"
+                | dfngdfsngdkfgdflskgdflgdflg
+              div id="tabs-3"
+                | dksfjghkdsfgdfkjghdsfkjghdskjg
+              div id="tabs-4"
+                | jgljdfslgjdfjsgdfklsgj
 
 
 javascript:
