@@ -70,7 +70,7 @@ html
                 li
                     div id="text-btn-group"
                       | Select Update Type:
-                    div class="btn-group"
+                    div class="btn-group" id="box-margin"
                        a class="btn dropdown-toggle" data-toggle="dropdown" href="#"
                          | All
                          span class="caret" id="my-caret"
@@ -103,10 +103,14 @@ html
 
            div class="tabs"
               ul class="tabNavigation"
-                li: a href="#tabs-1" Messages
-                li: a href="#tabs-2" Requests
-                li: a href="#tabs-3" Notifications
-                li: a href="#tabs-4" Suggested Users
+                li
+                  a class="tab" href="#tabs-1" Messages
+                li
+                  a class="tab" href="#tabs-2" Requests
+                li
+                  a class="tab" href="#tabs-3" Notifications
+                li
+                  a class="active-tab" href="#tabs-4" Suggested Users
               div id="tabs-1"
                 | lsdkjfgdfklsgdflsgndflsgnjdflgj
               div id="tabs-2"
@@ -114,7 +118,33 @@ html
               div id="tabs-3"
                 | dksfjghkdsfgdfkjghdsfkjghdskjg
               div id="tabs-4"
-                | jgljdfslgjdfjsgdfklsgj
+                span class="sort" Sort by Profile Type
+                span class="sort" Sort by First Name
+                span class="sort" Sort by Last Name
+                br
+                span class="btn-group" id="box1-margin"
+                   a class="btn dropdown-toggle" data-toggle="dropdown" href="#"
+                     | All
+                     span class="caret" id="my-caret2"
+                   ul class="dropdown-menu"
+                     li dfhgksdfhgdfkgh
+                     li dhfgk sdfhgkhdf
+
+                span class="btn-group" id="box2-margin"
+                   a class="btn dropdown-toggle" data-toggle="dropdown" href="#"
+                     | Descending
+                     span class="caret" id="my-caret3"
+                   ul class="dropdown-menu"
+                     li dfhgksdfhgdfkgh
+                     li dhfgk sdfhgkhdf
+                span class="btn-group" id="box3-margin"
+                   a class="btn dropdown-toggle" data-toggle="dropdown" href="#"
+                     | Descending
+                     span class="caret" id="my-caret4"
+                   ul class="dropdown-menu"
+                     li dfhgksdfhgdfkgh
+                     li dhfgk sdfhgkhdf
+
 
 
 javascript:
@@ -124,8 +154,8 @@ javascript:
         $('div.tabs ul.tabNavigation a').click(function () {
             tabContainers.hide();
             tabContainers.filter(this.hash).show();
-            $('div.tabs ul.tabNavigation a').removeClass('selected');
-            $(this).addClass('selected');
+            $('div.tabs ul.tabNavigation a').removeClass('active-tab').addClass('tab');
+            $(this).addClass('active-tab').removeClass('tab');
             return false;
         }).filter(':first').click();
     });
@@ -136,13 +166,3 @@ javascript:
             $(this).parent().next().slideToggle();
 	    });
 	});
-
-	$(function(){
-	    var params = {
-        changedEl: ".lineForm select",
-        visRows: 5,
-        scrollArrows: true
-        }
-
-        cuSel(params);
-	})

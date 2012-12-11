@@ -1,5 +1,5 @@
 body {
-    background: #dcdcdc;
+    background: #d3d3d3;
 }
 
 .main {
@@ -209,7 +209,7 @@ a {
 
 .tabs {
     position: absolute;
-    margin-left: 350px;
+    margin-left: 245px;
     margin-top: 30px;
 }
 
@@ -219,18 +219,31 @@ a {
     padding: 0;
 }
 
-.tabs ul li {
-    display: inline;
+.active-tab {
+    border-left: 1px solid #a9a9a9;
+    border-right: 1px solid #a9a9a9;
+    border-top: 1px solid #a9a9a9;
+    border-bottom: 3px solid #f0f8ff;
+    margin-right: 5px;
+    background: #f0f8ff;
+    .myRadius(7px, 7px);
+}
+
+.tab {
     border: 1px solid #a9a9a9;
     margin-right: 5px;
     background: #f0f8ff;
-    padding: 10px;
+    .myRadius(7px, 7px);
 }
 
 .tabs ul li a {
     text-decoration: none;
     color: black;
-    padding: 3px 10px;
+    padding: 10px 20px;
+}
+
+.tabs ul li {
+    display: inline;
 }
 
 .tabs div {
@@ -239,11 +252,18 @@ a {
     height: 300px;
     border: 1px solid #a9a9a9;
     background: #f0f8ff;
-    margin-top: 10px;
+    margin-top: 9px;
+    .myRadius(0px, 7px, 7px, 7px);
 }
+
 
 .tabNavigation li a:focus {
     outline: 0;
+}
+
+.sort {
+    margin-left: 20px;
+    color: #696969;
 }
 
 //rightSpan
@@ -297,10 +317,11 @@ a {
     .setMargian(-265px, -73px);
 }
 
-.btn-group > .btn:first-child {
-    margin-left: -12px;
+#box-margin {
+    margin-left: 10px;
     width: 150px;
 }
+
 
 #text-btn-group {
     margin-left: 10px;
@@ -311,13 +332,37 @@ a {
     color: #696969;
 }
 
-.btn dropdown-toggle {
-    width: 100px;
-}
 
 #my-caret {
     border-top: 4px solid #708090;
     margin-left: 133px;
+}
+
+#my-caret2 {
+    border-top: 4px solid #708090;
+    margin-left: 50px;
+}
+
+#my-caret3 {
+    border-top: 4px solid #708090;
+    margin-left: 20px;
+}
+
+#my-caret4 {
+    border-top: 4px solid #708090;
+    margin-left: 20px;
+}
+
+#box1-margin{
+    margin-left: 40px;
+}
+
+#box2-margin{
+    margin-left: 22px;
+}
+
+#box3-margin{
+    margin-left: 22px;
 }
 
 .btn {
