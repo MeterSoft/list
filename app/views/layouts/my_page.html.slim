@@ -6,6 +6,7 @@ html
       = stylesheet_link_tag "application", :media => "all"
       = javascript_include_tag "application"
       = javascript_include_tag "bootstrap"
+      = javascript_include_tag "jquery.tinycarousel.min.js"
       = csrf_meta_tags
 
 
@@ -95,8 +96,7 @@ html
                                    span class="mini-lable"
                                      | 27 minutes ago via iPhone
                                div id="image-close"
-                                  div id="table-image-close"
-                                    = image_tag("glyphicons-halflings.png")
+                                  button class="close" &times;
 
 
 
@@ -111,13 +111,13 @@ html
                   a class="tab" href="#tabs-3" Notifications
                 li
                   a class="active-tab" href="#tabs-4" Suggested Users
-              div id="tabs-1"
+              div id="tabs-1" class="tab-div"
                 | lsdkjfgdfklsgdflsgndflsgnjdflgj
-              div id="tabs-2"
+              div id="tabs-2" class="tab-div"
                 | dfngdfsngdkfgdflskgdflgdflg
-              div id="tabs-3"
+              div id="tabs-3" class="tab-div"
                 | dksfjghkdsfgdfkjghdsfkjghdskjg
-              div id="tabs-4"
+              div id="tabs-4" class="tab-div"
                 span class="sort" Sort by Profile Type
                 span class="sort" Sort by First Name
                 span class="sort" Sort by Last Name
@@ -144,6 +144,51 @@ html
                    ul class="dropdown-menu"
                      li dfhgksdfhgdfkgh
                      li dhfgk sdfhgkhdf
+                span class="search-tab"
+                   form
+                     span
+                       input type="text" class="" placeholder="Search"
+                div id="scroll-tab"
+                  ul class="nav nav-pills nav-stacked" id="div-tab-align"
+                      - 15.times do
+                         li class="li-tab"
+                           div id="tab-line"
+                             div id="tab-image"
+                                = image_tag("all.PNG")
+                           div id="tab-line-main"
+                               p ADoe Jane
+                               span class="status"
+                                 | Online
+                               br
+                               span class="mini-lable"
+                                 i class="icon-user"
+                                 | Has
+                                 a id="tab-alert" 4 mutual
+                                 |connections with
+                           div id="tab-button"
+                                button class="btn" type="button" View Profile
+                                button class="btn btn-inverse" id="tab-button-2" type="button" Send Request
+
+           div class="slider"
+               div id="slider-code"
+                  a class="buttons prev" href="#" left
+                  div class="viewport"
+                    ul class="overview"
+                      li
+                         = image_tag("picture3.jpg")
+                      li
+                         = image_tag("picture2.jpg")
+                      li
+                         = image_tag("picture4.jpg")
+                      li
+                         = image_tag("picture3.jpg")
+                      li
+                         = image_tag("picture2.jpg")
+                      li
+                         = image_tag("picture4.jpg")
+                  a class="buttons next" href="#" right
+
+
 
 
 
@@ -166,3 +211,9 @@ javascript:
             $(this).parent().next().slideToggle();
 	    });
 	});
+
+	$(function() {
+        $('#slider-code').tinycarousel({display: 2});
+	});
+
+

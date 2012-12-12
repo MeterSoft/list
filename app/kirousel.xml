@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="content">
+	<name>Content - Kirousel</name>
+	<creationDate>04/2009</creationDate>
+	<author>Kinesphère</author>
+	<authorEmail>contact@kinesphere.fr</authorEmail>
+	<authorUrl>http://www.kinesphere.fr</authorUrl>
+	<copyright>This extension in released under the GNU/GPL License - http://www.gnu.org/copyleft/gpl.html</copyright>
+	<version>1.1</version>
+	<description>KIROUSEL_DESC</description>
+  
+  
+  <params>
+    <param name="kirousel_dossier" type="text" default="images/kirousel/" label="KIROUSEL_DOSSIER" description="KIROUSEL_DOSSIER_DESC" />
+	<param name="kirousel_sens" type="list" default="horiz" label="KIROUSEL_EFFET" description="KIROUSEL_EFFET_DESC">
+		<option value="default">Horizontal</option>
+		<option value="vert">Vertical</option>
+		<option value="fondu">Fondu / Fade</option>
+		<option value="rebond">Rebond / Bouncing</option>			
+	</param>
+	
+	<param name="kirousel_boucle" type="radio" default="0" label="KIROUSEL_BOUCLE" description="KIROUSEL_BOUCLE_DESC">
+		<option value="0">Yes</option>
+		<option value="1">No</option>
+	</param>	
+    	<param name="kirousel_item" type="text" default="1" label="KIROUSEL_ITEM" description="KIROUSEL_ITEM_DESC" />
+	<param name="kirousel_pagination" type="radio" default="0" label="KIROUSEL_PAGINATION" description="KIROUSEL_PAGINATION_DESC">
+		<option value="1">Yes</option>
+		<option value="0">No</option>
+	</param>
+	<param name="kirousel_defil" type="radio" default="0" label="KIROUSEL_DEFIL" description="KIROUSEL_DEFIL_DESC">
+		<option value="1">Yes</option>
+		<option value="0">No</option>
+	</param>
+	<param name="kirousel_delais" type="text" default="5000" label="KIROUSEL_DELAIS" description="KIROUSEL_DELAIS_DESC" />	
+  </params>
+  
+  <files>
+    <filename plugin="kirousel">kirousel.php</filename>
+    <filename plugin="kirousel">plugin_kirousel/kirousel-jquery.js</filename>
+    <filename plugin="kirousel">plugin_kirousel/kirousel.css</filename>    
+    <filename plugin="kirousel">plugin_kirousel/kirousel-jquery-easing.js</filename>
+    <filename plugin="kirousel">plugin_kirousel/next.png</filename> 
+    <filename plugin="kirousel">plugin_kirousel/prev.png</filename>
+    <filename plugin="kirousel">plugin_kirousel/next-active.png</filename> 
+    <filename plugin="kirousel">plugin_kirousel/prev-active.png</filename>
+    <filename plugin="kirousel">plugin_kirousel/kirousel-logo.jpg</filename>    
+  </files>
+  
+  <languages>
+    <language tag="en-GB">language/en-GB/en-GB.plg_content_kirousel.ini</language>
+    <language tag="fr-FR">language/fr-FR/fr-FR.plg_content_kirousel.ini</language>    
+  </languages>
+</install>
