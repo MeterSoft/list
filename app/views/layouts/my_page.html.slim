@@ -169,24 +169,71 @@ html
                                 button class="btn" type="button" View Profile
                                 button class="btn btn-inverse" id="tab-button-2" type="button" Send Request
 
-           div class="slider"
+           div class="slider" id="slider1"
+               div id="lible-suggested_user"
+                 = image_tag("all.PNG")
+               div id="suggested_user" Suggested Users
                div id="slider-code"
-                  a class="buttons prev" href="#" left
+                  a class="buttons prev prev1" href="#" left
                   div class="viewport"
                     ul class="overview"
-                      li
-                         = image_tag("picture3.jpg")
-                      li
-                         = image_tag("picture2.jpg")
-                      li
-                         = image_tag("picture4.jpg")
-                      li
-                         = image_tag("picture3.jpg")
-                      li
-                         = image_tag("picture2.jpg")
-                      li
-                         = image_tag("picture4.jpg")
-                  a class="buttons next" href="#" right
+                      li class="image-slider-size active-slider" rel="1"
+                         = image_tag("1.jpg")
+                      li class="image-slider-size" rel="2"
+                         = image_tag("2.jpg")
+                      li class="image-slider-size" rel="3"
+                         = image_tag("3.jpg")
+                      li class="image-slider-size" rel="4"
+                         = image_tag("2.jpg")
+                      li class="image-slider-size" rel="5"
+                         = image_tag("3.jpg")
+                      li class="image-slider-size" rel="6"
+                         = image_tag("1.jpg")
+                  a class="buttons next next1" href="#" right
+
+           div class="slider" id="slider2"
+               div id="slider-code2"
+                  a class="buttons2 prev prev2" href="#" left
+                  div class="viewport"
+                    ul class="overview"
+                      li class="image-slider-size2" rel="1"
+                         = image_tag("1.jpg")
+                         div
+                            span class="context-line"
+                                | Sean Tracey Geronimo
+                            span class="context-line"
+                                | Senior Project Manager
+                            span  class="context-line"
+                                | Company: BeanStock Mecia
+                            span  class="context-line"
+                                | Sun Francisco. CA
+                         div id="slider-button"
+                            button class="btn" type="button" Connect
+                            button class="btn btn-inverse" id="tab-button-2" type="button" Message
+
+                      li class="image-slider-size2" rel="2"
+                         = image_tag("2.jpg")
+                         div
+                            span class="context-line"
+                                | Sean Tracey Geronimo
+                            span class="context-line"
+                                | Senior Project Manager
+                            span  class="context-line"
+                                | Company: BeanStock Mecia
+                            span  class="context-line"
+                                | Sun Francisco. CA
+                         div id="slider-button"
+                            button class="btn" type="button" Connect
+                            button class="btn btn-inverse" id="tab-button-2" type="button" Message
+                      li class="image-slider-size2" rel="3"
+                         = image_tag("3.jpg")
+                      li class="image-slider-size2" rel="4"
+                         = image_tag("2.jpg")
+                      li class="image-slider-size2" rel="5"
+                         = image_tag("3.jpg")
+                      li class="image-slider-size2" rel="6"
+                         = image_tag("1.jpg")
+                  a class="buttons2 next next2" href="#" right
 
 
 
@@ -213,7 +260,43 @@ javascript:
 	});
 
 	$(function() {
-        $('#slider-code').tinycarousel({display: 2});
+        $('#slider-code').tinycarousel({display: 1});
+        $('#slider-code2').tinycarousel({display: 1});
 	});
 
+	$(function() {
+        var sliders = $('#slider-code2');
+        $('.image-slider-size').click(
+            function() {
+                var id = $(this).attr("rel");
+                sliders.tinycarousel_move(id);
+                $('.image-slider-size').removeClass("active-slider");
+                $(this).addClass("active-slider");
+            }
+        );
+	});
+
+	$(function() {
+	    $('.next2').click(
+	        function() {
+                var pos = $('.active-slider').attr("rel");
+                $('.image-slider-size').removeClass("active-slider");
+                var mass = $('.image-slider-size');
+                $(mass[pos]).addClass("active-slider");
+                $('.next1').click();
+            }
+	    );
+	});
+
+	$(function() {
+	    $('.prev2').click(
+	        function() {
+                var pos = $('.active-slider').attr("rel");
+                $('.image-slider-size').removeClass("active-slider");
+                var mass = $('.image-slider-size');
+                $(mass[pos-2]).addClass("active-slider");
+                $('.prev1').click();
+            }
+	    );
+	});
 
