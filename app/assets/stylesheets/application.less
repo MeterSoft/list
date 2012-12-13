@@ -27,6 +27,10 @@ body {
     background: red;
 }
 
+.popover {
+    width: 260px;
+}
+
 .textmenu {
     padding: 10px 200px;
     background-color:red;
@@ -271,7 +275,8 @@ a {
 
 #scroll-tab {
     overflow: auto;
-    height: 600px;
+    height: 590px;
+    margin-top: 10px;
 }
 
 #scroll-span2 {
@@ -352,7 +357,7 @@ input, textarea, .uneditable-input {
     display: inline-block;
 }
 
-#span2 h3 {
+#top-span2 {
     background: #201D1D;
     color: #f0f8ff;
     margin: 0;
@@ -362,6 +367,33 @@ input, textarea, .uneditable-input {
     line-height: normal;
     padding: 5px;
 }
+
+.popover.bottom {
+    margin: 10px -94px;
+}
+
+.popover.bottom .arrow {
+    left: 80%;
+}
+
+#slider-line1 {
+    color: #b22222;
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+#slider-line2 {
+    color: black;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+#slider-line3 {
+    color: #a9a9a9;
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+
 
 #navigation {
     float: left;
@@ -509,12 +541,19 @@ input, textarea, .uneditable-input {
 #tab-line {
     display: inline-block;
     padding: 10px;
-    width: 50px;
+    width: 40px;
     vertical-align: super;
 }
 
 #tab-image {
     .getImage(40px, 40px);
+}
+
+#p-popover {
+    color: black;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
 }
 
 #tab-image img {
@@ -533,10 +572,34 @@ input, textarea, .uneditable-input {
     padding: 1px;
 }
 
+#popover-line {
+    width: 100px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px 5px;
+}
+
+#p2-popover {
+    color: #a9a9a9;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.popover-content {
+    padding: 1px;
+}
+
 #tab-alert {
     text-decoration: underline;
     padding: 3px;
     color: #5f9ea0;
+    cursor: pointer;
+}
+
+#span2-alert{
+    text-decoration: underline;
+    padding: 3px;
+    color: #a9a9a9;
     cursor: pointer;
 }
 
@@ -588,6 +651,31 @@ input, textarea, .uneditable-input {
 
 .image-slider-size2 img {
     .setMargian(0px, 0px);
+}
+
+#img-msg {
+    .getImage(14px, 16px);
+    float: right;
+    margin: 25px 5px;
+}
+
+#img-msg img {
+    .setMargian(0, -72px);
+}
+
+#img-men {
+    .getImage(14px, 16px);
+    float: left;
+    margin-right: 10px;
+}
+
+#img-men img {
+    .setMargian(0, -168px);
+}
+
+#mini-span2 {
+     color: #a9a9a9;
+     font-size: 12px;
 }
 
 #lible-suggested_user img {
@@ -647,9 +735,29 @@ input, textarea, .uneditable-input {
 .nav-stacked > li.li-tab {
     background: #f0f8ff;
     float: left;
-    border-bottom: 1px solid #dcdcdc;
-    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #D8D1D1;
+    border-top: 1px solid #D8D1D1;
     height: 70px;
+}
+
+#li-span1 {
+    border-bottom: 1px solid #D8D1D1;
+    border-top: 1px solid #D8D1D1;
+}
+
+#scroll-popover {
+    height: 200px;
+    overflow: auto;
+}
+
+#li-popover {
+    width: 240px;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #D8D1D1;
+    border-bottom: 1px solid #D8D1D1;
+    height: 60px;
+    float: left;
 }
 
 #tab-button-2 {
