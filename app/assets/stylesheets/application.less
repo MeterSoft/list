@@ -274,10 +274,14 @@ a {
 
 //rightSpan
 
-.span {
+#span {
     margin-top: 20px;
     position: absolute;
+}
 
+#span2 {
+    margin: 330px 915px;
+    position: absolute;
 }
 
 .rightSpan {
@@ -291,8 +295,8 @@ a {
     background: #f5f5f5;
 }
 
-.span h3 {
-    background: -moz-CellHighlightText;
+#span h3 {
+    background: #201D1D;
     color: #f0f8ff;
     margin: 0;
     .myRadius(10px, 10px);
@@ -302,7 +306,23 @@ a {
     padding: 5px;
 }
 
-.span h3 div {
+#span2 h3 {
+    background: #201D1D;
+    color: #f0f8ff;
+    margin: 0;
+    .myRadius(10px, 10px);
+    font-size: 13px;
+    width: 335px;
+    line-height: normal;
+    padding: 5px;
+}
+
+
+#span h3 div {
+    display: inline-block;
+}
+
+#span2 h3 div {
     display: inline-block;
 }
 
@@ -314,12 +334,29 @@ a {
     .setMargian(-144px, -20px);
 }
 
+#h3_image4 {
+    .getImage(28px, 13px);
+}
+
+#h3_image4 img {
+    .setMargian(-389px, -1080px);
+}
+
 #h3_image2 {
     .getImage(14px, 12px);
     margin-left: 80px;
 }
 
 #h3_image2 img {
+    .setMargian(-265px, -73px);
+}
+
+#h3_image3 {
+    .getImage(14px, 12px);
+    margin-left: 185px;
+}
+
+#h3_image3 img {
     .setMargian(-265px, -73px);
 }
 
