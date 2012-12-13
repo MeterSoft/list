@@ -11,92 +11,92 @@ html
 
 
     body
-
-       div class="top"
-           div id="top_img"
-             = image_tag("all.PNG")
-           div class="top_menu"
-               div id="discover"
+       div id="main-my-page"
+           div class="top"
+               div id="top_img"
                  = image_tag("all.PNG")
-               = link_to "Discover"
-               div id="collaborate"
-                 = image_tag("all.PNG")
-               = link_to "Collaborate"
-               div id="transact"
-                 = image_tag("all.PNG")
-               = link_to "Transact"
+               div class="top_menu"
+                   div id="discover"
+                     = image_tag("all.PNG")
+                   = link_to "Discover"
+                   div id="collaborate"
+                     = image_tag("all.PNG")
+                   = link_to "Collaborate"
+                   div id="transact"
+                     = image_tag("all.PNG")
+                   = link_to "Transact"
 
-           div id="top_search"
-             form
-               span
-                 input type="text" class="" placeholder="Search"
+               div id="top_search"
+                 form
+                   span
+                     input type="text" class="" placeholder="Search"
 
-           div class="top_menu2"
-               div id="alerts"
-                   = image_tag("all.PNG")
-               div class="red_div"
-                 = link_to "6 Alerts"
-               div id="messages"
-                   = image_tag("all.PNG")
-               div class="red_div"
-                 = link_to "5 Messages"
-               div id="updates"
-                   = image_tag("all.PNG")
-               div class="blue_div"
-                 = link_to "3 Updates"
+               div class="top_menu2"
+                   div id="alerts"
+                       = image_tag("all.PNG")
+                   div class="red_div"
+                     = link_to "6 Alerts"
+                   div id="messages"
+                       = image_tag("all.PNG")
+                   div class="red_div"
+                     = link_to "5 Messages"
+                   div id="updates"
+                       = image_tag("all.PNG")
+                   div class="blue_div"
+                     = link_to "3 Updates"
 
-           div class="btn-group"
-             button class="btn" Tracey Geronimo
-             button class="btn dropdown-toggle" data-toggle="dropdown"
-               span class="caret"
-             ul class="dropdown-menu" id="sel"
-               li
-                 a href="#" dfgjdfljg
-               li
-                 a href="#" sdfkghdfkhgdf
+               div class="btn-group"
+                 button class="btn" Tracey Geronimo
+                 button class="btn dropdown-toggle" data-toggle="dropdown"
+                   span class="caret"
+                 ul class="dropdown-menu" id="sel"
+                   li
+                     a href="#" dfgjdfljg
+                   li
+                     a href="#" sdfkghdfkhgdf
 
 
-       div class="main_panel"
-           div class="span" id="span"
-              h3
-                div id="h3_image1"
-                  = image_tag("glyphicons-halflings-white.png")
-                div
-                  | Market Stream
+           div class="main_panel"
+               div class="span" id="span"
+                  h3
+                    div id="h3_image1"
+                      = image_tag("glyphicons-halflings-white.png")
+                    div
+                      | Market Stream
 
-                span class="expand"
-                  div id="h3_image2"
-                    = image_tag("glyphicons-halflings-white2.png")
-              ul class="rightSpan"
-                li
-                    div id="text-btn-group"
-                      | Select Update Type:
-                    div class="btn-group" id="box-margin"
-                       a class="btn dropdown-toggle" data-toggle="dropdown" href="#"
-                         | All
-                         span class="caret" id="my-caret"
-                       ul class="dropdown-menu"
-                         li dfhgksdfhgdfkgh
-                         li dhfgk sdfhgkhdf
-                li
-                  br
-                li class="fixed-height"
-                   ul class="nav nav-pills nav-stacked"
-                      - 15.times do
-                         li
-                           a href="#"
-                               div id="first-td"
-                                 div id="table-image"
-                                    = image_tag("glyphicons-halflings.png")
-                               div id="inline-td-main"
-                                   span class="red-lable"
-                                     | Marian Volsky
-                                   | "enxious to see mockup"
-                                   br
-                                   span class="mini-lable"
-                                     | 27 minutes ago via iPhone
-                               div id="image-close"
-                                  button class="close" &times;
+                    span class="expand"
+                      div id="h3_image2"
+                        = image_tag("glyphicons-halflings-white2.png")
+                  ul class="rightSpan" id="span-ul1"
+                    li
+                        div id="text-btn-group"
+                          | Select Update Type:
+                        div class="btn-group" id="box-margin"
+                           a class="btn dropdown-toggle" data-toggle="dropdown" href="#"
+                             | All
+                             span class="caret" id="my-caret"
+                           ul class="dropdown-menu"
+                             li dfhgksdfhgdfkgh
+                             li dhfgk sdfhgkhdf
+                    li
+                      br
+                    li class="fixed-height"
+                       ul class="nav nav-pills nav-stacked"
+                          - 15.times do
+                             li
+                               a href="#"
+                                   div id="first-td"
+                                     div id="table-image"
+                                        = image_tag("glyphicons-halflings.png")
+                                   div id="inline-td-main"
+                                       span class="red-lable"
+                                         | Marian Volsky
+                                       | "enxious to see mockup"
+                                       br
+                                       span class="mini-lable"
+                                         | 27 minutes ago via iPhone
+                                   div id="image-close"
+                                      button class="close" &times;
 
 
 
@@ -163,7 +163,7 @@ html
                                span class="mini-lable"
                                  i class="icon-user"
                                  | Has
-                                 a id="tab-alert" 4 mutual
+                                 a id="tab-alert" href="#content" 4 mutual
                                  |connections with
                            div id="tab-button"
                                 button class="btn" type="button" View Profile
@@ -246,17 +246,64 @@ html
                 span class="expand"
                   div id="h3_image3"
                     = image_tag("glyphicons-halflings-white2.png")
-              ul class="rightSpan"
+              ul class="rightSpan" id="span-ul2"
                 li
-                    div id="text-btn-group"
-                      | Select Update Type:
-                    div class="btn-group" id="box-margin"
-                       a class="btn dropdown-toggle" data-toggle="dropdown" href="#"
-                         | All
-                         span class="caret" id="my-caret"
-                       ul class="dropdown-menu"
-                         li dfhgksdfhgdfkgh
-                         li dhfgk sdfhgkhdf
+                   div class="search-span-2"
+                       form
+                         span
+                           input type="text" class="" placeholder="type your search here"
+                li
+                    div id="navigation"
+                        span class="sort" Sort By Type
+                        span class="sort" Sort By Status
+                        span class="sort" Sort By Name
+                        br
+                        span class="btn-group"
+                           a class="btn dropdown-toggle" id="my-button1" data-toggle="dropdown" href="#"
+                             | Buyer
+                             span class="caret"
+                           ul class="dropdown-menu"
+                             li
+                               dfhgksdfhgdfkgh
+                             li
+                               dhfgk sdfhgkhdf
+
+                        span class="btn-group"
+                           a class="btn dropdown-toggle" id="my-button2" data-toggle="dropdown" href="#"
+                             | Offline
+                             span class="caret"
+                           ul class="dropdown-menu"
+                             li dfhgksdfhgdfkgh
+                             li dhfgk sdfhgkhdf
+                        span class="btn-group"
+                           a class="btn dropdown-toggle" id="my-button3" data-toggle="dropdown" href="#"
+                             | First Name
+                             span class="caret"
+                           ul class="dropdown-menu"
+                             li dfhgksdfhgdfkgh
+                             li dhfgk sdfhgkhdf
+                    li
+                        div id="scroll-span2"
+                          ul class="nav nav-pills nav-stacked" id="div-span2-align"
+                             - 10.times do
+                                li class="li-tab"
+                                   div id="tab-line"
+                                     div id="tab-image"
+                                        = image_tag("all.PNG")
+                                   div id="span2-line-main"
+                                       p ADoe Jane
+                                       span class="status"
+                                         | last sin 1h ago
+                                       br
+                                       span class="mini-lable"
+                                         i class="icon-user"
+                                         | Added Sean Smith and
+                                         a id="tab-alert" 4 other
+                                   div id="image-close"
+                                       button class="close" &times;
+
+           div class="content" id="content"
+               | djkfghdklfjghdfkjghdfkjgh
 
 
 
@@ -320,4 +367,24 @@ javascript:
             }
 	    );
 	});
+
+	$(function() {
+        $('a#tab-alert').popover({
+            content: $('#content').html(),
+            placement: "bottom",
+        });
+    });
+
+    $(function() {
+        $('a#tab-alert').popover({
+            content: $('#content').html(),
+            placement: "bottom"
+        });
+        $('#content').blur(
+            function() {
+                $(this).popover('hide');
+            }
+        );
+    });
+
 
