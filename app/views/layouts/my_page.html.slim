@@ -1,418 +1,344 @@
 <!DOCTYPE html>
 html
     head
-      title List
-      = stylesheet_link_tag "bootstrap", :media => "screen"
-      = stylesheet_link_tag "application", :media => "all"
-      = javascript_include_tag "application"
-      = javascript_include_tag "bootstrap"
-      = javascript_include_tag "jquery.tinycarousel.min.js"
-      = csrf_meta_tags
+          title List
+          = stylesheet_link_tag "bootstrap", :media => "screen"
+          = stylesheet_link_tag "application", :media => "all"
+          = javascript_include_tag "application"
+
+
+          = csrf_meta_tags
 
 
     body
-       div id="main-my-page"
-           div class="top"
-               div id="top_img"
-                   = image_tag("all.PNG")
-               div class="top_menu"
-                   div id="discover"
-                       = image_tag("all.PNG")
-                   = link_to "Discover"
-                   div id="collaborate"
-                       = image_tag("all.PNG")
-                   = link_to "Collaborate"
-                   div id="transact"
-                       = image_tag("all.PNG")
-                   = link_to "Transact"
+        div id="main-my-page"
+            div class="top"
+                div id="top_img"
+                    = image_tag("all.PNG")
+                div class="top_menu"
+                    div id="discover"
+                        = image_tag("all.PNG")
+                    = link_to "Discover"
+                    div id="collaborate"
+                        = image_tag("all.PNG")
+                    = link_to "Collaborate"
+                    div id="transact"
+                        = image_tag("all.PNG")
+                    = link_to "Transact"
 
-               div id="top_search"
-                   form
-                       span
-                           input type="text" class="" placeholder="Search"
+                div id="top_search"
+                    form
+                        span
+                            input type="text" class="" placeholder="Search"
 
-               div class="top_menu2"
-                   div id="alerts"
-                       = image_tag("all.PNG")
-                   div class="red_div"
-                     = link_to "6 Alerts"
-                   div id="messages"
-                       = image_tag("all.PNG")
-                   div class="red_div"
-                     = link_to "5 Messages"
-                   div id="updates"
-                       = image_tag("all.PNG")
-                   div class="blue_div"
-                     = link_to "3 Updates"
+                div class="top_menu2"
+                    div id="alerts"
+                        = image_tag("all.PNG")
+                    div class="red_div"
+                      = link_to "6 Alerts"
+                    div id="messages"
+                        = image_tag("all.PNG")
+                    div class="red_div"
+                      = link_to "5 Messages"
+                    div id="updates"
+                        = image_tag("all.PNG")
+                    div class="blue_div"
+                      = link_to "3 Updates"
 
-               div class="btn-group"
-                   button class="btn" Tracey Geronimo
-                   button class="btn dropdown-toggle" data-toggle="dropdown"
-                       span class="caret"
-                   ul class="dropdown-menu"
-                       li
-                           a href="#" dfgjdfljg
-                       li
-                           a href="#" sdfkghdfkhgdf
+                div class="btn-group"
+                    button class="btn" Tracey Geronimo
+                    button class="btn dropdown-toggle" data-toggle="dropdown"
+                        span class="caret"
+                    ul class="dropdown-menu"
+                        li
+                            a href="#" dfgjdfljg
+                        li
+                            a href="#" sdfkghdfkhgdf
 
 
-           div class="main_panel"
-               div class="span" id="span1"
-                  h3
-                      div id="h3_image1"
-                          = image_tag("glyphicons-halflings-white.png")
-                      div
-                          | Market Stream
+            div class="main_panel"
+                div class="span" id="span1"
+                    h3
+                        div id="h3_image1"
+                            = image_tag("glyphicons-halflings-white.png")
+                        div
+                            | Market Stream
 
-                      span class="expand"
-                          div id="h3_image2"
+                        span class="expand"
+                            div id="h3_image2"
+                              = image_tag("glyphicons-halflings-white2.png")
+                    ul class="rightSpan" id="span-ul1"
+                        li
+                            div id="text-btn-group"
+                                | Select Update Type:
+                            div class="btn-group" id="box-margin"
+                                a class="btn dropdown-toggle" data-toggle="dropdown" href="#"
+                                    | All
+                                    span class="caret" id="my-caret"
+                                ul class="dropdown-menu"
+                                    li
+                                        a href="#" dfhgksdfhgdfkgh
+                                    li
+                                        a href="#" dhfgk sdfhgkhdf
+                        li
+                            br
+                        li class="fixed-height"
+                            ul class="nav nav-pills nav-stacked"
+                                - 15.times do
+                                    li id="li-span1"
+                                        a href="#"
+                                            div id="first-td"
+                                                div id="table-image"
+                                                    = image_tag("glyphicons-halflings.png")
+                                            div id="inline-td-main"
+                                                span class="red-lable"
+                                                    | Marian Volsky
+                                                | "enxious to see mockup"
+                                                br
+                                                span class="mini-lable"
+                                                    | 27 minutes ago via iPhone
+                                            div id="image-close"
+                                                button class="close" &times;
+
+
+
+
+            div class="tabs"
+                ul class="tabNavigation"
+                    li
+                        a class="tab" href="#tabs-1" Messages
+                    li
+                        a class="tab" href="#tabs-2" Requests
+                    li
+                        a class="tab" href="#tabs-3" Notifications
+                    li
+                        a class="active-tab" href="#tabs-4" Suggested Users
+                div id="tabs-1" class="tab-div"
+                    | lsdkjfgdfklsgdflsgndflsgnjdflgj
+                div id="tabs-2" class="tab-div"
+                    | dfngdfsngdkfgdflskgdflgdflg
+                div id="tabs-3" class="tab-div"
+                    | dksfjghkdsfgdfkjghdsfkjghdskjg
+                div id="tabs-4" class="tab-div"
+                    span class="sort" Sort by Profile Type
+                    span class="sort" Sort by First Name
+                    span class="sort" Sort by Last Name
+                    br
+                    span class="btn-group" id="box1-margin"
+                        a class="btn dropdown-toggle" data-toggle="dropdown" href="#"
+                            | All
+                            span class="caret" id="my-caret2"
+                        ul class="dropdown-menu"
+                            li
+                                a href="#" dfhgksdfhgdfkgh
+                            li
+                                a href="#" dhfgk sdfhgkhdf
+
+                    span class="btn-group" id="box2-margin"
+                        a class="btn dropdown-toggle" data-toggle="dropdown" href="#"
+                            | Descending
+                            span class="caret" id="my-caret3"
+                        ul class="dropdown-menu"
+                            li
+                                a href="#" dfhgksdfhgdfkgh
+                            li
+                                a href="#" dhfgk sdfhgkhdf
+                    span class="btn-group" id="box3-margin"
+                        a class="btn dropdown-toggle" data-toggle="dropdown" href="#"
+                            | Descending
+                            span class="caret" id="my-caret4"
+                        ul class="dropdown-menu"
+                            li
+                                a href="#" dfhgksdfhgdfkgh
+                            li
+                                a href="#" dhfgk sdfhgkhdf
+                    span class="search-tab"
+                        form
+                            span
+                                input type="text" class="" placeholder="Search"
+
+                    div id="scroll-tab"
+                        ul class="nav nav-pills nav-stacked" id="div-tab-align"
+                            - 15.times do
+                                li class="li-tab"
+                                    div id="tab-line"
+                                        div id="tab-image"
+                                            = image_tag("all.PNG")
+                                    div id="tab-line-main"
+                                        p ADoe Jane
+                                        span class="status"
+                                            | Online
+                                        br
+                                        span class="mini-lable"
+                                            i class="icon-user"
+                                            | Has
+                                            a id="tab-alert" href="#content" 4 mutual
+                                            |connections with
+                                    div id="tab-button"
+                                         button class="btn" type="button" View Profile
+                                         button class="btn btn-inverse" id="tab-button-2" type="button" Send Request
+
+            div class="slider" id="slider1"
+                div id="lible-suggested_user"
+                    = image_tag("all.PNG")
+                div id="suggested_user" Suggested Users
+                div id="slider-code"
+                    a class="buttons prev prev1" href="#" left
+                    div class="viewport"
+                        ul class="overview"
+                            li class="image-slider-size active-slider" rel="1"
+                                = image_tag("1.jpg")
+                            li class="image-slider-size" rel="2"
+                                = image_tag("2.jpg")
+                            li class="image-slider-size" rel="3"
+                                = image_tag("3.jpg")
+                            li class="image-slider-size" rel="4"
+                                = image_tag("2.jpg")
+                            li class="image-slider-size" rel="5"
+                                = image_tag("3.jpg")
+                            li class="image-slider-size" rel="6"
+                                = image_tag("1.jpg")
+                    a class="buttons next next1" href="#" right
+
+            div class="slider" id="slider2"
+                div id="slider-code2"
+                    a class="buttons2 prev prev2" href="#" left
+                    div class="viewport"
+                        ul class="overview"
+                            li class="image-slider-size2" rel="1"
+                                 = image_tag("1.jpg")
+                                 div
+                                     span class="context-line" id="slider-line1"
+                                         | Sean Tracey Geronimo
+                                     span class="context-line" id="slider-line2"
+                                         | Senior Project Manager
+                                     span  class="context-line" id="slider-line3"
+                                         | Company: BeanStock Mecia
+                                     span  class="context-line" id="slider-line3"
+                                         | Sun Francisco. CA
+                                 div id="slider-button"
+                                     button class="btn" type="button" Connect
+                                     button class="btn btn-inverse" id="tab-button-2" type="button" Message
+
+                            li class="image-slider-size2" rel="2"
+                                 = image_tag("2.jpg")
+                                 div
+                                     span class="context-line"
+                                         | Sean Tracey Geronimo
+                                     span class="context-line"
+                                         | Senior Project Manager
+                                     span  class="context-line"
+                                         | Company: BeanStock Mecia
+                                     span  class="context-line"
+                                         | Sun Francisco. CA
+                                 div id="slider-button"
+                                     button class="btn" type="button" Connect
+                                     button class="btn btn-inverse" id="tab-button-2" type="button" Message
+                            li class="image-slider-size2" rel="3"
+                                 = image_tag("3.jpg")
+                            li class="image-slider-size2" rel="4"
+                                 = image_tag("2.jpg")
+                            li class="image-slider-size2" rel="5"
+                                 = image_tag("3.jpg")
+                            li class="image-slider-size2" rel="6"
+                                 = image_tag("1.jpg")
+                    a class="buttons2 next next2" href="#" right
+
+
+            div class="span" id="span2"
+                h3 id="top-span2"
+                    div id="h3_image4"
+                        = image_tag("all.PNG")
+                    div
+                        | My Marketplace
+                    span class="expand"
+                        div id="h3_image3"
                             = image_tag("glyphicons-halflings-white2.png")
-                  ul class="rightSpan" id="span-ul1"
-                      li
-                          div id="text-btn-group"
-                              | Select Update Type:
-                          div class="btn-group" id="box-margin"
-                              a class="btn dropdown-toggle" data-toggle="dropdown" href="#"
-                                  | All
-                                  span class="caret" id="my-caret"
-                              ul class="dropdown-menu"
-                                  li
-                                      a href="#" dfhgksdfhgdfkgh
-                                  li
-                                      a href="#" dhfgk sdfhgkhdf
-                      li
-                          br
-                      li class="fixed-height"
-                          ul class="nav nav-pills nav-stacked"
-                              - 15.times do
-                                  li id="li-span1"
-                                      a href="#"
-                                          div id="first-td"
-                                              div id="table-image"
-                                                  = image_tag("glyphicons-halflings.png")
-                                          div id="inline-td-main"
-                                              span class="red-lable"
-                                                  | Marian Volsky
-                                              | "enxious to see mockup"
-                                              br
-                                              span class="mini-lable"
-                                                  | 27 minutes ago via iPhone
-                                          div id="image-close"
-                                              button class="close" &times;
+                ul class="rightSpan" id="span-ul2"
+                    li
+                        div class="search-span-2"
+                            form
+                                span
+                                    input type="text" class="" placeholder="type your search here"
+                    li
+                        div id="navigation"
+                            span class="sort" Sort By Type
+                            span class="sort" Sort By Status
+                            span class="sort" Sort By Name
+                            br
+                            span class="btn-group"
+                                a class="btn dropdown-toggle" id="my-button1" data-toggle="dropdown" href="#"
+                                    | Buyer
+                                    span class="caret"
+                                ul class="dropdown-menu"
+                                    li
+                                        a href="#" dfhgksdfhgdfkgh
+                                    li
+                                        a href="#" dhfgk sdfhgkhdf
 
+                            span class="btn-group"
+                                a class="btn dropdown-toggle" id="my-button2" data-toggle="dropdown" href="#"
+                                    | Offline
+                                    span class="caret"
+                                ul class="dropdown-menu"
+                                    li
+                                        a href="#" dfhgksdfhgdfkgh
+                                    li
+                                        a href="#" dhfgk sdfhgkhdf
+                            span class="btn-group"
+                                a class="btn dropdown-toggle" id="my-button3" data-toggle="dropdown" href="#"
+                                    | First Name
+                                    span class="caret"
+                                ul class="dropdown-menu"
+                                    li
+                                        a href="#" dfhgksdfhgdfkgh
+                                    li
+                                        a href="#" dhfgk sdfhgkhdf
+                    li
+                        div id="scroll-span2"
+                            ul class="nav nav-pills nav-stacked" id="div-span2-align"
+                                - 10.times do
+                                    li class="li-tab"
+                                        div id="tab-line"
+                                            div id="tab-image"
+                                                = image_tag("all.PNG")
+                                        div id="span2-line-main"
+                                            p ADoe Jane
+                                            span class="status"
+                                                | last sin 1h ago
+                                            br
+                                            span id="mini-span2"
+                                                span id="img-men"
+                                                    = image_tag("glyphicons-halflings.png")
+                                                | Added Sean Smith and
+                                                a id="tab-alert" 4 other
+                                        div id="img-msg"
+                                            = image_tag("glyphicons-halflings.png")
 
-
-
-           div class="tabs"
-               ul class="tabNavigation"
-                   li
-                       a class="tab" href="#tabs-1" Messages
-                   li
-                       a class="tab" href="#tabs-2" Requests
-                   li
-                       a class="tab" href="#tabs-3" Notifications
-                   li
-                       a class="active-tab" href="#tabs-4" Suggested Users
-               div id="tabs-1" class="tab-div"
-                   | lsdkjfgdfklsgdflsgndflsgnjdflgj
-               div id="tabs-2" class="tab-div"
-                   | dfngdfsngdkfgdflskgdflgdflg
-               div id="tabs-3" class="tab-div"
-                   | dksfjghkdsfgdfkjghdsfkjghdskjg
-               div id="tabs-4" class="tab-div"
-                   span class="sort" Sort by Profile Type
-                   span class="sort" Sort by First Name
-                   span class="sort" Sort by Last Name
-                   br
-                   span class="btn-group" id="box1-margin"
-                       a class="btn dropdown-toggle" data-toggle="dropdown" href="#"
-                           | All
-                           span class="caret" id="my-caret2"
-                       ul class="dropdown-menu"
-                           li
-                               a href="#" dfhgksdfhgdfkgh
-                           li
-                               a href="#" dhfgk sdfhgkhdf
-
-                   span class="btn-group" id="box2-margin"
-                       a class="btn dropdown-toggle" data-toggle="dropdown" href="#"
-                           | Descending
-                           span class="caret" id="my-caret3"
-                       ul class="dropdown-menu"
-                           li
-                               a href="#" dfhgksdfhgdfkgh
-                           li
-                               a href="#" dhfgk sdfhgkhdf
-                   span class="btn-group" id="box3-margin"
-                       a class="btn dropdown-toggle" data-toggle="dropdown" href="#"
-                           | Descending
-                           span class="caret" id="my-caret4"
-                       ul class="dropdown-menu"
-                           li
-                               a href="#" dfhgksdfhgdfkgh
-                           li
-                               a href="#" dhfgk sdfhgkhdf
-                   span class="search-tab"
-                       form
-                           span
-                               input type="text" class="" placeholder="Search"
-                   div id="scroll-tab"
-                       ul class="nav nav-pills nav-stacked" id="div-tab-align"
-                           - 15.times do
-                               li class="li-tab"
-                                   div id="tab-line"
-                                       div id="tab-image"
-                                           = image_tag("all.PNG")
-                                   div id="tab-line-main"
-                                       p ADoe Jane
-                                       span class="status"
-                                           | Online
-                                       br
-                                       span class="mini-lable"
-                                           i class="icon-user"
-                                           | Has
-                                           a id="tab-alert" href="#content" 4 mutual
-                                           |connections with
-                                   div id="tab-button"
-                                        button class="btn" type="button" View Profile
-                                        button class="btn btn-inverse" id="tab-button-2" type="button" Send Request
-
-           div class="slider" id="slider1"
-               div id="lible-suggested_user"
-                 = image_tag("all.PNG")
-               div id="suggested_user" Suggested Users
-               div id="slider-code"
-                  a class="buttons prev prev1" href="#" left
-                  div class="viewport"
-                    ul class="overview"
-                      li class="image-slider-size active-slider" rel="1"
-                         = image_tag("1.jpg")
-                      li class="image-slider-size" rel="2"
-                         = image_tag("2.jpg")
-                      li class="image-slider-size" rel="3"
-                         = image_tag("3.jpg")
-                      li class="image-slider-size" rel="4"
-                         = image_tag("2.jpg")
-                      li class="image-slider-size" rel="5"
-                         = image_tag("3.jpg")
-                      li class="image-slider-size" rel="6"
-                         = image_tag("1.jpg")
-                  a class="buttons next next1" href="#" right
-
-           div class="slider" id="slider2"
-               div id="slider-code2"
-                   a class="buttons2 prev prev2" href="#" left
-                   div class="viewport"
-                       ul class="overview"
-                           li class="image-slider-size2" rel="1"
-                                = image_tag("1.jpg")
-                                div
-                                    span class="context-line" id="slider-line1"
-                                        | Sean Tracey Geronimo
-                                    span class="context-line" id="slider-line2"
-                                        | Senior Project Manager
-                                    span  class="context-line" id="slider-line3"
-                                        | Company: BeanStock Mecia
-                                    span  class="context-line" id="slider-line3"
-                                        | Sun Francisco. CA
-                                div id="slider-button"
-                                    button class="btn" type="button" Connect
-                                    button class="btn btn-inverse" id="tab-button-2" type="button" Message
-
-                           li class="image-slider-size2" rel="2"
-                                = image_tag("2.jpg")
-                                div
-                                    span class="context-line"
-                                        | Sean Tracey Geronimo
-                                    span class="context-line"
-                                        | Senior Project Manager
-                                    span  class="context-line"
-                                        | Company: BeanStock Mecia
-                                    span  class="context-line"
-                                        | Sun Francisco. CA
-                                div id="slider-button"
-                                    button class="btn" type="button" Connect
-                                    button class="btn btn-inverse" id="tab-button-2" type="button" Message
-                           li class="image-slider-size2" rel="3"
-                                = image_tag("3.jpg")
-                           li class="image-slider-size2" rel="4"
-                                = image_tag("2.jpg")
-                           li class="image-slider-size2" rel="5"
-                                = image_tag("3.jpg")
-                           li class="image-slider-size2" rel="6"
-                                = image_tag("1.jpg")
-                   a class="buttons2 next next2" href="#" right
-
-
-           div class="span" id="span2"
-               h3 id="top-span2"
-                   div id="h3_image4"
-                       = image_tag("all.PNG")
-                   div
-                       | My Marketplace
-                   span class="expand"
-                       div id="h3_image3"
-                           = image_tag("glyphicons-halflings-white2.png")
-               ul class="rightSpan" id="span-ul2"
-                   li
-                       div class="search-span-2"
-                           form
-                               span
-                                   input type="text" class="" placeholder="type your search here"
-                   li
-                       div id="navigation"
-                           span class="sort" Sort By Type
-                           span class="sort" Sort By Status
-                           span class="sort" Sort By Name
-                           br
-                           span class="btn-group"
-                               a class="btn dropdown-toggle" id="my-button1" data-toggle="dropdown" href="#"
-                                   | Buyer
-                                   span class="caret"
-                               ul class="dropdown-menu"
-                                   li
-                                       a href="#" dfhgksdfhgdfkgh
-                                   li
-                                       a href="#" dhfgk sdfhgkhdf
-
-                           span class="btn-group"
-                               a class="btn dropdown-toggle" id="my-button2" data-toggle="dropdown" href="#"
-                                   | Offline
-                                   span class="caret"
-                               ul class="dropdown-menu"
-                                   li
-                                       a href="#" dfhgksdfhgdfkgh
-                                   li
-                                       a href="#" dhfgk sdfhgkhdf
-                           span class="btn-group"
-                               a class="btn dropdown-toggle" id="my-button3" data-toggle="dropdown" href="#"
-                                   | First Name
-                                   span class="caret"
-                               ul class="dropdown-menu"
-                                   li
-                                       a href="#" dfhgksdfhgdfkgh
-                                   li
-                                       a href="#" dhfgk sdfhgkhdf
-                   li
-                       div id="scroll-span2"
-                           ul class="nav nav-pills nav-stacked" id="div-span2-align"
-                               - 10.times do
-                                   li class="li-tab"
-                                       div id="tab-line"
-                                           div id="tab-image"
-                                               = image_tag("all.PNG")
-                                       div id="span2-line-main"
-                                           p ADoe Jane
-                                           span class="status"
-                                               | last sin 1h ago
-                                           br
-                                           span id="mini-span2"
-                                               span id="img-men"
-                                                   = image_tag("glyphicons-halflings.png")
-                                               | Added Sean Smith and
-                                               a id="tab-alert" 4 other
-                                       div id="img-msg"
-                                           = image_tag("glyphicons-halflings.png")
-
-           div class="content" id="content"
-               div id="scroll-popover"
-                   ul class="nav nav-pills nav-stacked" id="ul-popover"
-                       - 10.times do
-                           li id="li-popover"
-                               div id="tab-line"
-                                   div id="tab-image"
-                                       = image_tag("all.PNG")
-                               div id="popover-line"
-                                   div id="p-popover"
-                                       | Marjan Volsky
-                                   div id="p2-popover"
-                                       | Creative engner
+            div class="content" id="content"
+                div id="scroll-popover"
+                    ul class="nav nav-pills nav-stacked" id="ul-popover"
+                        - 10.times do
+                            li id="li-popover"
+                                div id="tab-line"
+                                    div id="tab-image"
+                                        = image_tag("all.PNG")
+                                div id="popover-line"
+                                    div id="p-popover"
+                                        | Marjan Volsky
+                                    div id="p2-popover"
+                                        | Creative engner
 
 
 
 
 javascript:
-    $(function () {
-        var tabContainers = $('div.tabs > div');
-        tabContainers.hide().filter(':first').show();
-        $('div.tabs ul.tabNavigation a').click(function () {
-            tabContainers.hide();
-            tabContainers.filter(this.hash).show();
-            $('div.tabs ul.tabNavigation a').removeClass('active-tab').addClass('tab');
-            $(this).addClass('active-tab').removeClass('tab');
-            return false;
-        }).filter(':first').click();
-    });
-
-    $(function(){
-        $(".rightSpan").hide();
-        $("h3 span.expand").click(function(){
-            $(this).parent().next().slideToggle();
-	    });
-	});
-
-	$(function() {
-        $('#slider-code').tinycarousel({display: 1});
-        $('#slider-code2').tinycarousel({display: 1});
-	});
-
-	$(function() {
-        var sliders = $('#slider-code2');
-        $('.image-slider-size').click(
-            function() {
-                var id = $(this).attr("rel");
-                sliders.tinycarousel_move(id);
-                $('.image-slider-size').removeClass("active-slider");
-                $(this).addClass("active-slider");
-            }
-        );
-	});
-
-	$(function() {
-	    $('.next2').click(
-	        function() {
-                var pos = $('.active-slider').attr("rel");
-                $('.image-slider-size').removeClass("active-slider");
-                var mass = $('.image-slider-size');
-                $(mass[pos]).addClass("active-slider");
-                if ($('.next1').hasClass('disable') == false) {
-                    $('.next1').click();
-                }
-            }
-	    );
-	});
-
-	$(function() {
-	    $('.prev2').click(
-	        function() {
-                var pos = $('.active-slider').attr("rel");
-                $('.image-slider-size').removeClass("active-slider");
-                var mass = $('.image-slider-size');
-                $(mass[pos-2]).addClass("active-slider");
-                if ($('.prev1').hasClass('disable') == false) {
-                    $('.prev1').click();
-                }
-            }
-	    );
-	});
-
-	$(function() {
-        $('body').on('click.popover.data-api',function() {
-            $('a#tab-alert').popover('hide');
-        });
-
-        $('a#tab-alert').popover({
-            html: 'true',
-            content: $('#content').html(),
-            placement: 'bottom',
-            trigger: 'manual'
-        }).click(function(e) {
-            e.stopPropagation();
-            $(this).popover('show');
-        });
 
 
 
-    });
+
+
+
+
 
 
