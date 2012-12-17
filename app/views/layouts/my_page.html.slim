@@ -13,42 +13,49 @@ html
     body
         div id="main-my-page"
             div class="top"
-                div id="top_img"
-                    = image_tag("all.PNG")
-                div class="top_menu"
+                div id="first-a"
+                    div id="top_img"
+                        = image_tag("all.PNG")
                     div id="discover"
                         = image_tag("all.PNG")
-                    = link_to "Discover"
+                    div id="discover-text"
+                        = link_to "Discover"
                     div id="collaborate"
                         = image_tag("all.PNG")
-                    = link_to "Collaborate"
+                    div id="collaborate-text"
+                        = link_to "Collaborate"
                     div id="transact"
                         = image_tag("all.PNG")
-                    = link_to "Transact"
-
+                    div id="transact-text"
+                        = link_to "Transact"
                 div id="top_search"
                     form
                         span
                             input type="text" class="" placeholder="Search"
+                div id="v-line-div"
+                    hr class="vertical-line"
 
-                div class="top_menu2"
+                div class="second-a"
                     div id="alerts"
                         = image_tag("all.PNG")
-                    div class="red_div"
-                      = link_to "6 Alerts"
+                    div class="red_div" id="red_div1"
+                        = link_to "6 Alerts"
                     div id="messages"
                         = image_tag("all.PNG")
-                    div class="red_div"
+                    div class="red_div" id="red_div2"
                       = link_to "5 Messages"
                     div id="updates"
                         = image_tag("all.PNG")
-                    div class="blue_div"
+                    div class="blue_div" id="blue_div"
                       = link_to "3 Updates"
 
-                div class="btn-group"
-                    button class="btn" Tracey Geronimo
+                div id="v-line-div2"
+                    hr class="vertical-line"
+
+                div class="btn-group" id="btn-span-top"
+                    button class="btn" id="top-btn-r" Tracey Geronimo
                     button class="btn dropdown-toggle" data-toggle="dropdown"
-                        span class="caret"
+                        span class="caret caret-top"
                     ul class="dropdown-menu"
                         li
                             a href="#" dfgjdfljg
@@ -64,15 +71,15 @@ html
                         div
                             | Market Stream
 
-                        span class="expand"
+                        span class="expand" id="button-span"
                             div id="h3_image2"
                               = image_tag("glyphicons-halflings-white2.png")
-                    ul class="rightSpan" id="span-ul1"
+                    ul class="leftSpan" id="span-ul1"
                         li
                             div id="text-btn-group"
                                 | Select Update Type:
                             div class="btn-group" id="box-margin"
-                                a class="btn dropdown-toggle" data-toggle="dropdown" href="#"
+                                a class="btn dropdown-toggle" id="text-dropdown-span1" data-toggle="dropdown" href="#"
                                     | All
                                     span class="caret" id="my-caret"
                                 ul class="dropdown-menu"
@@ -80,25 +87,24 @@ html
                                         a href="#" dfhgksdfhgdfkgh
                                     li
                                         a href="#" dhfgk sdfhgkhdf
-                        li
-                            br
-                        li class="fixed-height"
-                            ul class="nav nav-pills nav-stacked"
+                        li id="scroll-span"
+                            ul class="nav nav-pills nav-stacked" id="li-ul-scroll"
                                 - 15.times do
                                     li id="li-span1"
-                                        a href="#"
-                                            div id="first-td"
-                                                div id="table-image"
-                                                    = image_tag("glyphicons-halflings.png")
-                                            div id="inline-td-main"
-                                                span class="red-lable"
-                                                    | Marian Volsky
+
+                                        div id="first-td"
+                                            div id="table-image"
+                                                = image_tag("glyphicons-halflings.png")
+                                        div id="inline-td-main"
+                                            span class="red-lable"
+                                                | Marian Volsky
+                                            span class="black-lable"
                                                 | "enxious to see mockup"
-                                                br
-                                                span class="mini-lable"
-                                                    | 27 minutes ago via iPhone
-                                            div id="image-close"
-                                                button class="close" &times;
+                                            br
+                                            span class="mini-lable"
+                                                | 27 minutes ago via iPhone
+                                        div id="image-close"
+                                            button class="close" id="button-close-visible" &times;
 
 
 
@@ -106,13 +112,13 @@ html
             div class="tabs"
                 ul class="tabNavigation"
                     li
-                        a class="tab" href="#tabs-1" Messages
+                        a class="active-tab tab" href="#tabs-1" Messages
                     li
                         a class="tab" href="#tabs-2" Requests
                     li
                         a class="tab" href="#tabs-3" Notifications
                     li
-                        a class="active-tab" href="#tabs-4" Suggested Users
+                        a class="tab" href="#tabs-4" Suggested Users
                 div id="tabs-1" class="tab-div"
                     | lsdkjfgdfklsgdflsgndflsgnjdflgj
                 div id="tabs-2" class="tab-div"
@@ -120,63 +126,69 @@ html
                 div id="tabs-3" class="tab-div"
                     | dksfjghkdsfgdfkjghdsfkjghdskjg
                 div id="tabs-4" class="tab-div"
-                    span class="sort" Sort by Profile Type
-                    span class="sort" Sort by First Name
-                    span class="sort" Sort by Last Name
-                    br
-                    span class="btn-group" id="box1-margin"
-                        a class="btn dropdown-toggle" data-toggle="dropdown" href="#"
-                            | All
-                            span class="caret" id="my-caret2"
-                        ul class="dropdown-menu"
-                            li
-                                a href="#" dfhgksdfhgdfkgh
-                            li
-                                a href="#" dhfgk sdfhgkhdf
-
-                    span class="btn-group" id="box2-margin"
-                        a class="btn dropdown-toggle" data-toggle="dropdown" href="#"
-                            | Descending
-                            span class="caret" id="my-caret3"
-                        ul class="dropdown-menu"
-                            li
-                                a href="#" dfhgksdfhgdfkgh
-                            li
-                                a href="#" dhfgk sdfhgkhdf
-                    span class="btn-group" id="box3-margin"
-                        a class="btn dropdown-toggle" data-toggle="dropdown" href="#"
-                            | Descending
-                            span class="caret" id="my-caret4"
-                        ul class="dropdown-menu"
-                            li
-                                a href="#" dfhgksdfhgdfkgh
-                            li
-                                a href="#" dhfgk sdfhgkhdf
-                    span class="search-tab"
-                        form
-                            span
-                                input type="text" class="" placeholder="Search"
+                    div class="tab-menu"
+                        div class="tab-menu-block"
+                            div class="sort" id="sort1" Sort by Profile Type
+                            div class="btn-group button-size-tab" id="tab-btn1"
+                                a class="btn dropdown-toggle trans caret-off" data-toggle="dropdown" href="#"
+                                    | All
+                                    span class="my-caret"
+                                ul class="dropdown-menu"
+                                    li
+                                        a href="#" dfhgksdfhgdfkgh
+                                    li
+                                        a href="#" dhfgk sdfhgkhdf
+                        div class="tab-menu-block"
+                            div class="sort" id="sort2" Sort by First Name
+                            div class="btn-group button-size-tab" id="tab-btn2"
+                                a class="btn dropdown-toggle trans caret-off" data-toggle="dropdown" href="#"
+                                    | Descending
+                                    span class="my-caret"
+                                ul class="dropdown-menu"
+                                    li
+                                        a href="#" dfhgksdfhgdfkgh
+                                    li
+                                        a href="#" dhfgk sdfhgkhdf
+                        div class="tab-menu-block"
+                            div class="sort" id="sort3" Sort by Last Name
+                            div class="btn-group button-size-tab" id="tab-btn3"
+                                a class="btn dropdown-toggle trans caret-off" data-toggle="dropdown" href="#"
+                                    | Descending
+                                    span class="my-caret"
+                                ul class="dropdown-menu"
+                                    li
+                                        a href="#" dfhgksdfhgdfkgh
+                                    li
+                                        a href="#" dhfgk sdfhgkhdf
+                        div class="search-tab"
+                            form
+                                span
+                                    input type="text" class="" placeholder="Search"
 
                     div id="scroll-tab"
-                        ul class="nav nav-pills nav-stacked" id="div-tab-align"
+                        ul class="nav nav-pills" id="div-tab-align"
                             - 15.times do
                                 li class="li-tab"
                                     div id="tab-line"
                                         div id="tab-image"
                                             = image_tag("all.PNG")
                                     div id="tab-line-main"
-                                        p ADoe Jane
-                                        span class="status"
-                                            | Online
-                                        br
-                                        span class="mini-lable"
-                                            i class="icon-user"
-                                            | Has
-                                            a id="tab-alert" href="#content" 4 mutual
-                                            |connections with
+                                        div id="user-name" ADoe Jane
+                                        div id="status"
+                                            span Online
+                                        div class="mini-lable"
+                                            div id="img-men" class="men-pos"
+                                                = image_tag("glyphicons-halflings.png")
+                                            div id="men-pos-text"
+                                                | Has
+                                                a id="tab-alert" href="#content" 4 mutual
+                                                |connections with
                                     div id="tab-button"
-                                         button class="btn" type="button" View Profile
+                                         button class="btn my-btn" id="tab-btn-size" type="button" View Profile
                                          button class="btn btn-inverse" id="tab-button-2" type="button" Send Request
+                    div id="load"
+                        span
+                            | Load More Result
 
             div class="slider" id="slider1"
                 div id="lible-suggested_user"
@@ -205,43 +217,37 @@ html
                     a class="buttons2 prev prev2" href="#" left
                     div class="viewport"
                         ul class="overview"
-                            li class="image-slider-size2" rel="1"
-                                 = image_tag("1.jpg")
-                                 div
-                                     span class="context-line" id="slider-line1"
+                            li rel="1"
+                                 div class="image-slider-size2"
+                                     = image_tag("1.jpg")
+                                 div class="text-slider2"
+                                     div class="context-line" id="slider-line1"
                                          | Sean Tracey Geronimo
-                                     span class="context-line" id="slider-line2"
+                                     div class="context-line" id="slider-line2"
                                          | Senior Project Manager
-                                     span  class="context-line" id="slider-line3"
+                                     div  class="context-line" id="slider-line3"
                                          | Company: BeanStock Mecia
-                                     span  class="context-line" id="slider-line3"
+                                     div  class="context-line" id="slider-line4"
                                          | Sun Francisco. CA
                                  div id="slider-button"
-                                     button class="btn" type="button" Connect
-                                     button class="btn btn-inverse" id="tab-button-2" type="button" Message
+                                     button class="btn" type="button" id="slider-btn-1" Connect
+                                     button class="btn btn-inverse" id="slider-btn-2" type="button" Message
 
-                            li class="image-slider-size2" rel="2"
-                                 = image_tag("2.jpg")
-                                 div
-                                     span class="context-line"
-                                         | Sean Tracey Geronimo
-                                     span class="context-line"
-                                         | Senior Project Manager
-                                     span  class="context-line"
-                                         | Company: BeanStock Mecia
-                                     span  class="context-line"
-                                         | Sun Francisco. CA
-                                 div id="slider-button"
-                                     button class="btn" type="button" Connect
-                                     button class="btn btn-inverse" id="tab-button-2" type="button" Message
-                            li class="image-slider-size2" rel="3"
-                                 = image_tag("3.jpg")
-                            li class="image-slider-size2" rel="4"
-                                 = image_tag("2.jpg")
-                            li class="image-slider-size2" rel="5"
-                                 = image_tag("3.jpg")
-                            li class="image-slider-size2" rel="6"
-                                 = image_tag("1.jpg")
+                            li rel="2"
+                                 div class="image-slider-size2"
+                                     = image_tag("2.jpg")
+                            li rel="3"
+                                 div class="image-slider-size2"
+                                     = image_tag("3.jpg")
+                            li rel="4"
+                                 div class="image-slider-size2"
+                                     = image_tag("2.jpg")
+                            li rel="5"
+                                 div class="image-slider-size2"
+                                     = image_tag("3.jpg")
+                            li rel="6"
+                                 div class="image-slider-size2"
+                                     = image_tag("1.jpg")
                     a class="buttons2 next next2" href="#" right
 
 
@@ -251,7 +257,7 @@ html
                         = image_tag("all.PNG")
                     div
                         | My Marketplace
-                    span class="expand"
+                    span class="expand" id="button-span2"
                         div id="h3_image3"
                             = image_tag("glyphicons-halflings-white2.png")
                 ul class="rightSpan" id="span-ul2"
@@ -298,7 +304,7 @@ html
                         div id="scroll-span2"
                             ul class="nav nav-pills nav-stacked" id="div-span2-align"
                                 - 10.times do
-                                    li class="li-tab"
+                                    li class="li-span2"
                                         div id="tab-line"
                                             div id="tab-image"
                                                 = image_tag("all.PNG")
@@ -333,7 +339,112 @@ html
 
 
 javascript:
+     $(function () {
+        var tabContainers = $('div.tabs > div');
+        tabContainers.hide().filter(':first').show();
+        $('div.tabs ul.tabNavigation a').click(function () {
+            tabContainers.hide();
+            tabContainers.filter(this.hash).show();
+            $('div.tabs ul.tabNavigation a').removeClass('active-tab');
+            $(this).addClass('active-tab');
+            $("#scroll-tab").getNiceScroll().onResize();
+            return false;
+        }).filter(':first').click();
+     });
 
+        $(function(){
+            $(".rightSpan").hide();
+            $("#button-span2").click(
+            function(){
+                $(this).parent().next().slideToggle();
+                $("#scroll-span2").getNiceScroll().onResize();
+               });
+           });
+
+        $(function(){
+            $(".leftSpan").hide();
+            $("#button-span").click(
+            function(){
+                $(this).parent().next().slideToggle();
+                $("#scroll-span").getNiceScroll().onResize();
+               });
+           });
+
+        $(function() {
+               $('#slider-code').tinycarousel({display: 1});
+               $('#slider-code2').tinycarousel({display: 1});
+        });
+
+        $(function() {
+               var sliders = $('#slider-code2');
+               $('.image-slider-size').click(
+                   function() {
+                       var id = $(this).attr("rel");
+                       sliders.tinycarousel_move(id);
+                       $('.image-slider-size').removeClass("active-slider");
+                       $(this).addClass("active-slider");
+                   }
+               );
+        });
+
+        $(function() {
+               $('.trans').click(
+                   function() {
+                       $(this).toggleClass("caret-on");
+                   }
+               );
+        });
+
+        $(function() {
+            $('.next2').click(
+                function() {
+                       var pos = $('.active-slider').attr("rel");
+                       $('.image-slider-size').removeClass("active-slider");
+                       var mass = $('.image-slider-size');
+                       $(mass[pos]).addClass("active-slider");
+                       if ($('.next1').hasClass('disable') == false) {
+                           $('.next1').click();
+                       }
+                   }
+            );
+        });
+
+        $(function() {
+            $('.prev2').click(
+                function() {
+                       var pos = $('.active-slider').attr("rel");
+                       $('.image-slider-size').removeClass("active-slider");
+                       var mass = $('.image-slider-size');
+                       $(mass[pos-2]).addClass("active-slider");
+                       if ($('.prev1').hasClass('disable') == false) {
+                           $('.prev1').click();
+                       }
+                   }
+            );
+        });
+
+        $(function() {
+               $('body').on('click.popover.data-api',function() {
+                   $('a#tab-alert').popover('hide');
+               });
+
+               $('a#tab-alert').popover({
+                   html: 'true',
+                   content: $('#content').html(),
+                   placement: 'bottom',
+                   trigger: 'manual'
+               }).click(function(e) {
+                   e.stopPropagation();
+                   $(this).popover('show');
+               });
+
+
+               $("html").niceScroll({cursorcolor:"#e0e0e0"});
+               $("#scroll-tab").niceScroll({cursorcolor:"#e0e0e0"});
+               $("#scroll-span2").niceScroll({cursorcolor:"#e0e0e0"});
+               $("#scroll-span").niceScroll({cursorcolor:"#e0e0e0"});
+
+        });
 
 
 
