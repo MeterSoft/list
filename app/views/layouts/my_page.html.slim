@@ -268,33 +268,32 @@ html
                                     input type="text" class="" placeholder="type your search here"
                     li
                         div id="navigation"
-                            span class="sort" Sort By Type
-                            span class="sort" Sort By Status
-                            span class="sort" Sort By Name
-                            br
-                            span class="btn-group"
+                            div class="sort" id="sort-s1" Sort By Type
+                            div class="sort" id="sort-s2" Sort By Status
+                            div class="sort" id="sort-s3" Sort By Name
+                            div class="btn-group" id="sort-s4"
                                 a class="btn dropdown-toggle" id="my-button1" data-toggle="dropdown" href="#"
                                     | Buyer
-                                    span class="caret"
+                                    span class="caret sp2-caret"
                                 ul class="dropdown-menu"
                                     li
                                         a href="#" dfhgksdfhgdfkgh
                                     li
                                         a href="#" dhfgk sdfhgkhdf
 
-                            span class="btn-group"
+                            div class="btn-group" id="sort-s5"
                                 a class="btn dropdown-toggle" id="my-button2" data-toggle="dropdown" href="#"
                                     | Offline
-                                    span class="caret"
+                                    span class="caret sp2-caret"
                                 ul class="dropdown-menu"
                                     li
                                         a href="#" dfhgksdfhgdfkgh
                                     li
                                         a href="#" dhfgk sdfhgkhdf
-                            span class="btn-group"
+                            div class="btn-group" id="sort-s6"
                                 a class="btn dropdown-toggle" id="my-button3" data-toggle="dropdown" href="#"
                                     | First Name
-                                    span class="caret"
+                                    span class="caret sp2-caret"
                                 ul class="dropdown-menu"
                                     li
                                         a href="#" dfhgksdfhgdfkgh
@@ -309,11 +308,10 @@ html
                                             div id="tab-image"
                                                 = image_tag("all.PNG")
                                         div id="span2-line-main"
-                                            p ADoe Jane
-                                            span class="status"
+                                            div id="ps2-text1" ADoe Jane
+                                            div id="ps2-text2" class="status"
                                                 | last sin 1h ago
-                                            br
-                                            span id="mini-span2"
+                                            div id="mini-span2"
                                                 span id="img-men"
                                                     = image_tag("glyphicons-halflings.png")
                                                 | Added Sean Smith and
@@ -358,6 +356,7 @@ javascript:
             function(){
                 $(this).parent().next().slideToggle();
                 $("#scroll-span2").getNiceScroll().onResize();
+                $("html").getNiceScroll().onResize();
                });
            });
 
@@ -434,6 +433,7 @@ javascript:
                    placement: 'bottom',
                    trigger: 'manual'
                }).click(function(e) {
+                   $('.popover').hide();
                    e.stopPropagation();
                    $(this).popover('show');
                });
@@ -445,7 +445,6 @@ javascript:
                $("#scroll-span").niceScroll({cursorcolor:"#e0e0e0"});
 
         });
-
 
 
 
