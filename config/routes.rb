@@ -9,6 +9,8 @@ List::Application.routes.draw do
 
   resources :tasks_orders
 
+  resources :auto_complate
+
   devise_scope :user do
     get "/" => "devise/registrations#new"
   end

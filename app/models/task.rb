@@ -35,4 +35,13 @@ class Task
   def title_or_description
     self.errors.add(:title, 'title or description should be specified') if title.blank? && description.blank?
   end
+
+  def category_name
+    category.name
+  end
+
+  def category_name(name)
+     self.category = Category.find_or_create_by_name(name) unless name.blank?
+  end
+
 end

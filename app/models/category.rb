@@ -5,6 +5,7 @@ class Category
   field :name, type: String
   field :user_id, type: Integer
   field :category_tasks_order, type: Array
+  include Mongoid::Document
 
 
   attr_accessible :name, :user_id, :category_tasks_order, :user
@@ -24,4 +25,6 @@ class Category
     end
     new_order + (logged_in_user.categories - new_order)
   end
+
+
 end

@@ -22,6 +22,7 @@
   div class="field"
     = f.label :category
     br
-    = f.select :category_id, Category.all.map {|c| [c.name, c.id]}
+    div
+        = f.text_field :category, {:id => "search", :url => auto_complate_index_path(:js), :method => :get}
   div class="actions"
     = f.submit

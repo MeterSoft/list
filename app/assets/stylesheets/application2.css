@@ -66,4 +66,18 @@ div.v {
 
 li.line:hover div.v {
     display: inline-block;
+    position: absolute;
+}
+
+#icon2 {
+    margin-left: 40px;
+}
+
+#icon3 {
+    margin-left: 75px;
+}
+
+#id1 {
+    display: inline-block;
+    margin-left: 20px;
 }

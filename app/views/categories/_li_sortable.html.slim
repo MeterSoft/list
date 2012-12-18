@@ -1,7 +1,7 @@
 div id="category_ol"
   div class="title"
-    div №
-    div Category
+    div id="id1" №
+    div id="id1" Category
 
   div
     ol class="sortable"
@@ -11,9 +11,9 @@ div id="category_ol"
               = link_to category.name, tasks_path(:category_id => category)
             div class="v"
               = link_to image_tag("srch_24.png"), category
-            div class="v"
+            div class="v" id="icon2"
               = link_to image_tag("tools_24.png"), edit_category_path(category)
-            div class="v"
+            div class="v" id="icon3"
               = link_to image_tag("trash_24.png"), category, method: :delete, data: {confirm: 'Are you sure?'}, :remote => true
 
 javascript:

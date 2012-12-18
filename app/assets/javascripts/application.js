@@ -15,3 +15,10 @@
 //= require jquery-ui
 //= require_tree .
 
+$(function() {
+
+        $( "#search" ).autocomplete({
+            source: "auto_complate#index.js",
+            minLength: 1
+        });
+    });
